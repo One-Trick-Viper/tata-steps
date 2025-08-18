@@ -1,17 +1,23 @@
-dynamic step sounds featuring
+Armor-based footstep sounds: Footstep foley changes dynamically with armor weight:
 
-foley sounds based on your armor value (15 - 30 light, 30 - 60 medium, 60 - 120 heavy, 120 - 200 superheavy).
+Light (15–29)
 
-breathing sounds whilst sprinting
+Medium (30–59)
 
-running/walking sounds
+Heavy (60–119)
 
-crouch stance changing
+Superheavy (120–200)
 
-landing sounds
+Breathing audio: Audible breathing while sprinting.
 
-weapon rattle sounds, depending on weapon type. currently only supporting modern warfare base.
+Movement sounds: Different audio for running and walking. Crouching transitions.
 
-checks if rain (func_precipitation) is present on a map, if it is, then a wet layer will be played over your footsteps if you're outside
+Landing impact: Sounds triggered on landings.
 
-wet footstep overlay when you exit the water
+Weapon rattle: Subtle weapon noise while sprinting, based on weapon type (currently only supports Modern Warfare base).
+
+Audio layering:
+
+Detects rain (func_precipitation) and adds wet footstep layers when outdoors.
+
+Wet footstep overlay when exiting water.
