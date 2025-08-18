@@ -53,13 +53,13 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         end
     end
 
-    if armorvalue > 120 then
+    if armorvalue > 119 then
         ply:EmitSound(ply:KeyDown(IN_SPEED) and "superheavy.sprint" or "superheavy.walk")
-    elseif armorvalue > 60 then
+    elseif armorvalue > 59 then
         ply:EmitSound(ply:KeyDown(IN_SPEED) and "heavy.sprint" or "heavy.walk")
-    elseif armorvalue > 30 then
+    elseif armorvalue > 29 then
         ply:EmitSound(ply:KeyDown(IN_SPEED) and "medium.sprint" or "medium.walk")
-    elseif armorvalue > 15 then
+    elseif armorvalue > 14 then
         ply:EmitSound(ply:KeyDown(IN_SPEED) and "light.sprint" or "light.walk")
     end
 
