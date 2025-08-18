@@ -9,3 +9,5 @@ running/walking sounds
 crouch stance changing
 
 landing sounds
+
+weapon rattle sounds, depending on weapon type. currently only supporting modern warfare base.
