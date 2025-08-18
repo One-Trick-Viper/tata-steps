@@ -8,7 +8,7 @@ Heavy (60–119)
 
 Superheavy (120–200)
 
-Breathing audio: Audible breathing while sprinting.
+Breathing audio: Audible breathing while sprinting (After 10 seconds of consecutive sprinting, currently not toggle-able will be in the future).
 
 Movement sounds: Different audio for running and walking. Crouching transitions.
 
