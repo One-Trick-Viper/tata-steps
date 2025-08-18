@@ -11,3 +11,7 @@ crouch stance changing
 landing sounds
 
 weapon rattle sounds, depending on weapon type. currently only supporting modern warfare base.
+
+checks if rain (func_precipitation) is present on a map, if it is, then a wet layer will be played over your footsteps if you're outside
+
+wet footstep overlay when you exit the water
