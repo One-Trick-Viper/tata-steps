@@ -43,7 +43,7 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
     if (sprinting[materialtype]) then -- lets play the sounds lol
         ply:EmitSound("scuffle.tarmac")
         ply:EmitSound(sprinting[materialtype])
-        ply:EmitSound(ply:KeyDown(IN_SPEED) and "clothing.sprint" or "clothing.walk")
+        ply:EmitSound(ply:KeyDown(IN_SPEED) and "fatigues.sprint" or "fatigues.walk")
 
         if IndoorCheck(ply) then
             if (materialtype == MAT_CONCRETE or materialtype == MAT_TILE or materialtype == MAT_METAL or materialtype ==
@@ -54,13 +54,13 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
     end
 
     if armorvalue > 119 then
-        ply:EmitSound(ply:KeyDown(IN_SPEED) and "superheavy.sprint" or "superheavy.walk")
+        ply:EmitSound("superheavy")
     elseif armorvalue > 59 then
-        ply:EmitSound(ply:KeyDown(IN_SPEED) and "heavy.sprint" or "heavy.walk")
+        ply:EmitSound("heavy")
     elseif armorvalue > 29 then
-        ply:EmitSound(ply:KeyDown(IN_SPEED) and "medium.sprint" or "medium.walk")
+        ply:EmitSound("medium")
     elseif armorvalue > 14 then
-        ply:EmitSound(ply:KeyDown(IN_SPEED) and "light.sprint" or "light.walk")
+        ply:EmitSound("light")
     end
 
     if (weaponcategories[weapon.SubCategory]) and ply:KeyDown(IN_SPEED) then
@@ -113,11 +113,11 @@ hook.Add("PlayerTick", "PlayerBreathing", function(ply)
     if ply:KeyDown(IN_DUCK) and ply:IsOnGround() then
         if ply.PlayerCrouched == nil then
             ply.PlayerCrouched = true
-            ply:EmitSound("heavy.sprint")
+            ply:EmitSound("stand.to.crouch")
         end
     else
         if ply.PlayerCrouched == true then
-            ply:EmitSound("heavy.sprint")
+            ply:EmitSound("crouch.to.stand")
             ply.PlayerCrouched = nil
         end
     end
