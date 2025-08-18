@@ -16,6 +16,8 @@ Landing impact: Sounds triggered on landings.
 
 Weapon rattle: Subtle weapon noise while sprinting, based on weapon type (currently only supports Modern Warfare base).
 
+Indoor audio: Reverb indoors
+
 Audio layering:
 
 Detects rain (func_precipitation) and adds wet footstep layers when outdoors.
