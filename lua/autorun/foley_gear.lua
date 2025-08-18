@@ -1,6 +1,6 @@
 sound.Add({
     name = "land",
-    channel = CHAN_STATIC,
+    channel = 205,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -9,7 +9,7 @@ sound.Add({
 
 sound.Add({
     name = "stand.to.crouch",
-    channel = CHAN_STATIC,
+    channel = 206,
     volume = 1.0,
     level = 80,
     pitch = {95, 110},
@@ -18,7 +18,7 @@ sound.Add({
 
 sound.Add({
     name = "crouch.to.stand",
-    channel = CHAN_STATIC,
+    channel = 206,
     volume = 1.0,
     level = 80,
     pitch = {95, 110},
@@ -27,7 +27,7 @@ sound.Add({
 
 sound.Add({
     name = "fatigues.walk",
-    channel = CHAN_USER_BASE,
+    channel = 207,
     volume = 0.3,
     level = 80,
     pitch = {95, 110},
@@ -39,7 +39,7 @@ sound.Add({
 
 sound.Add({
     name = "fatigues.sprint",
-    channel = CHAN_STATIC,
+    channel = 207,
     volume = 0.3,
     level = 80,
     pitch = {95, 110},
@@ -51,7 +51,7 @@ sound.Add({
 
 sound.Add({
     name = "light",
-    channel = CHAN_STATIC,
+    channel = 208,
     volume = 1.0,
     level = 80,
     pitch = {95, 110},
@@ -61,7 +61,7 @@ sound.Add({
 
 sound.Add({
     name = "medium",
-    channel = CHAN_USER_BASE,
+    channel = 208,
     volume = 1.0,
     level = 80,
     pitch = {95, 110},
@@ -72,7 +72,7 @@ sound.Add({
 
 sound.Add({
     name = "heavy",
-    channel = CHAN_USER_BASE,
+    channel = 208,
     volume = 0.3,
     level = 80,
     pitch = {95, 110},
@@ -81,8 +81,19 @@ sound.Add({
 })
 
 sound.Add({
+    name = "superheavy",
+    channel = 208,
+    volume = 0.3,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"gear/superheavy-01.ogg", "gear/superheavy-02.ogg", "gear/superheavy-03.ogg", "gear/superheavy-04.ogg",
+             "gear/superheavy-05.ogg", "gear/superheavy-06.ogg", "gear/superheavy-07.ogg", "gear/superheavy-08.ogg",
+             "gear/superheavy-09.ogg"}
+})
+
+sound.Add({
     name = "rattle.rifle",
-    channel = CHAN_STATIC,
+    channel = 209,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -94,7 +105,7 @@ sound.Add({
 
 sound.Add({
     name = "rattle.pistol",
-    channel = CHAN_STATIC,
+    channel = 209,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -106,7 +117,7 @@ sound.Add({
 
 sound.Add({
     name = "rattle.smg",
-    channel = CHAN_STATIC,
+    channel = 209,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -117,13 +128,10 @@ sound.Add({
 })
 
 sound.Add({
-    name = "rattle.lmg",
-    channel = CHAN_STATIC,
-    volume = 1,
+    name = "bass",
+    channel = 210,
+    volume = 0.3,
     level = 80,
     pitch = {95, 110},
-    sound = {"gear/rattles/lmg-run-01.ogg", "gear/rattles/lmg-run-02.ogg", "gear/rattles/lmg-run-03.ogg",
-             "gear/rattles/lmg-run-04.ogg", "gear/rattles/lmg-run-05.ogg", "gear/rattles/lmg-run-06.ogg",
-             "gear/rattles/lmg-run-07.ogg", "gear/rattles/lmg-run-08.ogg", "gear/rattles/lmg-run-09.ogg",
-             "gear/rattles/lmg-run-10.ogg"}
+    sound = {"steps/bass-01.ogg", "steps/bass-02.ogg", "steps/bass-03.ogg", "steps/bass-04.ogg", "steps/bass-05.ogg"}
 })

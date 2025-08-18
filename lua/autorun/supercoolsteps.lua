@@ -12,7 +12,8 @@ local surfacefootsteps = {
     [MAT_METAL] = "metal.walk",
     [MAT_SNOW] = "snow.walk",
     [MAT_WOOD] = "wood.walk",
-    [MAT_TILE] = "tile.walk"
+    [MAT_TILE] = "tile.walk",
+    [MAT_SAND] = "sand.walk"
 }
 
 local surfacefootstepssprinting = {
@@ -22,12 +23,16 @@ local surfacefootstepssprinting = {
     [MAT_METAL] = "metal.sprint",
     [MAT_SNOW] = "snow.sprint",
     [MAT_WOOD] = "wood.sprint",
-    [MAT_TILE] = "tile.sprint"
+    [MAT_TILE] = "tile.sprint",
+    [MAT_SAND] = "sand.sprint"
 }
+
+local israining = #ents.FindByClass("func_precipitation") > 0
 
 hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, volume, rf)
     local weapon = ply:GetActiveWeapon()
     local armorvalue = ply:Armor()
+    local waterlevel = ply:WaterLevel()
     -- print(weapon.SubCategory)
     -- print(weaponcategories[weapon.SubCategory])
     local sprinting = ply:KeyDown(IN_SPEED) and surfacefootstepssprinting or surfacefootsteps
@@ -45,16 +50,31 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         ply:EmitSound(sprinting[materialtype])
         ply:EmitSound(ply:KeyDown(IN_SPEED) and "fatigues.sprint" or "fatigues.walk")
 
+        if waterlevel == 1 then
+            ply:EmitSound("water.ankle")
+        elseif waterlevel == 2 then
+            ply:EmitSound("water.waist")
+        end
+
+        if ply.WaterExitTime != nil and CurTime() < ply.WaterExitTime + 5 then
+            ply:EmitSound(ply:KeyDown(IN_SPEED) and "wet.sprint" or "wet.walk")
+        end
+
         if IndoorCheck(ply) then
             if (materialtype == MAT_CONCRETE or materialtype == MAT_TILE or materialtype == MAT_METAL or materialtype ==
                 MAT_WOOD) and IndoorCheck(ply) then
                 ply:EmitSound(ply:KeyDown(IN_SPEED) and "indoor.sprint" or "indoor.walk")
+            end
+        else
+            if israining then
+                ply:EmitSound(ply:KeyDown(IN_SPEED) and "wet.sprint" or "wet.walk")
             end
         end
     end
 
     if armorvalue > 119 then
         ply:EmitSound("superheavy")
+        ply:EmitSound("bass")
     elseif armorvalue > 59 then
         ply:EmitSound("heavy")
     elseif armorvalue > 29 then
@@ -88,14 +108,17 @@ function IndoorCheck(ply)
 end
 
 hook.Add("PlayerTick", "PlayerBreathing", function(ply)
+    local wasinwater = ply:WaterLevel()
+
     if CLIENT then
         return
     end
+
     if ply:KeyDown(IN_SPEED) and ply:IsOnGround() and ply:GetVelocity():Length() > 100 then
         if ply.BreathingStartTime == nil then
             ply.BreathingStartTime = CurTime()
         end
-        print(ply.BreathingStartTime)
+        -- print(ply.BreathingStartTime)
         if CurTime() > ply.BreathingStartTime + 10 then
             if ply.BreathingPlayed == nil then
                 ply:EmitSound("breath.loop")
@@ -119,6 +142,16 @@ hook.Add("PlayerTick", "PlayerBreathing", function(ply)
         if ply.PlayerCrouched == true then
             ply:EmitSound("crouch.to.stand")
             ply.PlayerCrouched = nil
+        end
+    end
+
+    if wasinwater > 0 then
+        ply.IsInWater = true
+        ply.WaterExitTime = nil
+    else
+        if ply.IsInWater == true then
+            ply.WaterExitTime = CurTime()
+            ply.IsInWater = false
         end
     end
 end)
