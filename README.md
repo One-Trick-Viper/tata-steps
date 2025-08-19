@@ -1,5 +1,7 @@
 Armor-based footstep sounds: Foley sounds change depending on armor (suit power) value.
+
 Values:
+
 Light (15–29)
 
 Medium (30–59)
