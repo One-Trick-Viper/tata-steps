@@ -99,8 +99,7 @@ sound.Add({
     pitch = {95, 110},
     sound = {"gear/rattles/rifle-run-01.ogg", "gear/rattles/rifle-run-02.ogg", "gear/rattles/rifle-run-03.ogg",
              "gear/rattles/rifle-run-04.ogg", "gear/rattles/rifle-run-05.ogg", "gear/rattles/rifle-run-06.ogg",
-             "gear/rattles/rifle-run-07.ogg", "gear/rattles/rifle-run-08.ogg", "gear/rattles/rifle-run-09.ogg",
-             "gear/rattles/rifle-run-10.ogg"}
+             "gear/rattles/rifle-run-07.ogg", "gear/rattles/rifle-run-08.ogg"}
 })
 
 sound.Add({
@@ -110,9 +109,7 @@ sound.Add({
     level = 80,
     pitch = {95, 110},
     sound = {"gear/rattles/pistol-run-01.ogg", "gear/rattles/pistol-run-02.ogg", "gear/rattles/pistol-run-03.ogg",
-             "gear/rattles/pistol-run-04.ogg", "gear/rattles/pistol-run-05.ogg", "gear/rattles/pistol-run-06.ogg",
-             "gear/rattles/pistol-run-07.ogg", "gear/rattles/pistol-run-08.ogg", "gear/rattles/pistol-run-09.ogg",
-             "gear/rattles/pistol-run-10.ogg"}
+             "gear/rattles/pistol-run-04.ogg", "gear/rattles/pistol-run-05.ogg"}
 })
 
 sound.Add({
@@ -122,9 +119,28 @@ sound.Add({
     level = 80,
     pitch = {95, 110},
     sound = {"gear/rattles/smg-run-01.ogg", "gear/rattles/smg-run-02.ogg", "gear/rattles/smg-run-03.ogg",
-             "gear/rattles/smg-run-04.ogg", "gear/rattles/smg-run-05.ogg", "gear/rattles/smg-run-06.ogg",
-             "gear/rattles/smg-run-07.ogg", "gear/rattles/smg-run-08.ogg", "gear/rattles/smg-run-09.ogg",
-             "gear/rattles/smg-run-10.ogg"}
+             "gear/rattles/smg-run-04.ogg"}
+})
+
+sound.Add({
+    name = "rattle.launcher",
+    channel = 209,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"gear/rattles/launcher-run-01.ogg", "gear/rattles/launcher-run-02.ogg", "gear/rattles/launcher-run-03.ogg",
+             "gear/rattles/launcher-run-04.ogg", "gear/rattles/launcher-run-05.ogg", "gear/rattles/launcher-run-06.ogg",
+             "gear/rattles/launcher-run-07.ogg", "gear/rattles/launcher-run-08.ogg"}
+})
+
+sound.Add({
+    name = "rattle.generic",
+    channel = 209,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"gear/rattles/generic-run-01.ogg", "gear/rattles/generic-run-02.ogg", "gear/rattles/generic-run-03.ogg",
+             "gear/rattles/generic-run-04.ogg", "gear/rattles/generic-run-05.ogg"}
 })
 
 sound.Add({

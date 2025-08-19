@@ -235,6 +235,28 @@ sound.Add({
 })
 
 sound.Add({
+    name = "carpet.walk",
+    channel = 204,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/carpet-walk-01.ogg", "steps/carpet-walk-02.ogg", "steps/carpet-walk-03.ogg",
+             "steps/carpet-walk-04.ogg", "steps/carpet-walk-05.ogg", "steps/carpet-walk-06.ogg",
+             "steps/carpet-walk-07.ogg", "steps/carpet-walk-08.ogg"}
+})
+
+sound.Add({
+    name = "carpet.sprint",
+    channel = 204,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/carpet-sprint-01.ogg", "steps/carpet-sprint-02.ogg", "steps/carpet-sprint-03.ogg",
+             "steps/carpet-sprint-04.ogg", "steps/carpet-sprint-05.ogg", "steps/carpet-sprint-06.ogg",
+             "steps/carpet-sprint-07.ogg", "steps/carpet-sprint-08.ogg"}
+})
+
+sound.Add({
     name = "wood.creak",
     channel = 211,
     volume = 1,

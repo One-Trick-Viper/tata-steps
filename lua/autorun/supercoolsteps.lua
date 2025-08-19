@@ -2,7 +2,10 @@ local weaponcategories = {
     ["Assault Rifles"] = "rattle.rifle",
     ["Pistols"] = "rattle.pistol",
     ["Lightmachine Guns"] = "rattle.lmg",
-    ["Submachine Guns"] = "rattle.smg"
+    ["Submachine Guns"] = "rattle.smg",
+    ["Shotguns"] = "rattle.generic",
+    ["Sniper RIfles"] = "rattle.rifled",
+    ["Launchers"] = "rattle.launcher"
 }
 
 local surfacefootsteps = {
@@ -27,12 +30,19 @@ local surfacefootstepssprinting = {
     [MAT_SAND] = "sand.sprint"
 }
 
-local israining = #ents.FindByClass("func_precipitation") > 0
-
 hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, volume, rf)
     local weapon = ply:GetActiveWeapon()
     local armorvalue = ply:Armor()
     local waterlevel = ply:WaterLevel()
+
+    local rain = ents.FindByClass("func_precipitation") [1]
+    print( rain:GetInternalVariable( "preciptype" ) ) 
+    local preciptype = 99
+    if IsValid(rain) then
+        preciptype = rain:GetInternalVariable( "preciptype" )
+    end
+    local israining = preciptype == 0 or preciptype == 4
+
     -- print(weapon.SubCategory)
     -- print(weaponcategories[weapon.SubCategory])
     local sprinting = ply:KeyDown(IN_SPEED) and surfacefootstepssprinting or surfacefootsteps
@@ -76,14 +86,14 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
 
 
     --Armor values :steamhappy:
-    if armorvalue > 119 then
+    if armorvalue > 120 then
         ply:EmitSound("superheavy")
         ply:EmitSound("bass")
-    elseif armorvalue > 59 then
+    elseif armorvalue > 60 then
         ply:EmitSound("heavy")
-    elseif armorvalue > 29 then
+    elseif armorvalue > 30 then
         ply:EmitSound("medium")
-    elseif armorvalue > 14 then
+    elseif armorvalue > 15 then
         ply:EmitSound("light")
     end
 
