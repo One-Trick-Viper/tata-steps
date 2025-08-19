@@ -18,6 +18,8 @@ Weapon rattle: Subtle weapon noise while sprinting, based on weapon type (curren
 
 Indoor audio: Reverb indoors
 
+Creaking: Walking on wood will play creaking sounds occassionally.
+
 Audio layering:
 
 Detects rain (func_precipitation) and adds wet footstep layers when outdoors.
