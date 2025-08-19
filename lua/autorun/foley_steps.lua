@@ -86,7 +86,7 @@ sound.Add({
 
 sound.Add({
     name = "water.waist",
-    channel = 203,
+    channel = CHAN_STATIC,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -235,11 +235,21 @@ sound.Add({
 })
 
 sound.Add({
+    name = "wood.creak",
+    channel = 211,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/wood-creak-01.ogg", "steps/wood-creak-02.ogg", "steps/wood-creak-03.ogg", "steps/wood-creak-04.ogg",
+             "steps/wood-creak-05.ogg", "steps/wood-creak-06.ogg", "steps/wood-creak-07.ogg"}
+})
+
+sound.Add({
     name = "tile.walk",
     channel = 204,
     volume = 1,
     level = 80,
-    pitch = {95, 110},
+    pitch = {130},
     sound = {"steps/tile-walk-01.ogg", "steps/tile-walk-02.ogg", "steps/tile-walk-03.ogg", "steps/tile-walk-04.ogg",
              "steps/tile-walk-05.ogg", "steps/tile-walk-06.ogg", "steps/tile-walk-07.ogg", "steps/tile-walk-08.ogg",
              "steps/tile-walk-09.ogg", "steps/tile-walk-10.ogg"}
@@ -250,7 +260,7 @@ sound.Add({
     channel = 204,
     volume = 1,
     level = 80,
-    pitch = {95, 110},
+    pitch = {130},
     sound = {"steps/tile-sprint-01.ogg", "steps/tile-sprint-02.ogg", "steps/tile-sprint-03.ogg",
              "steps/tile-sprint-04.ogg", "steps/tile-sprint-05.ogg", "steps/tile-sprint-06.ogg",
              "steps/tile-sprint-07.ogg", "steps/tile-sprint-08.ogg", "steps/tile-sprint-09.ogg",

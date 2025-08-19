@@ -54,9 +54,11 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
             ply:EmitSound("water.ankle")
         elseif waterlevel == 2 then
             ply:EmitSound("water.waist")
+        elseif waterlevel == 3 then
+            ply:EmitSound("water.waist")
         end
 
-        if ply.WaterExitTime != nil and CurTime() < ply.WaterExitTime + 5 then
+        if ply.WaterExitTime != nil and CurTime() < ply.WaterExitTime + 7 then
             ply:EmitSound(ply:KeyDown(IN_SPEED) and "wet.sprint" or "wet.walk")
         end
 
@@ -72,6 +74,8 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         end
     end
 
+
+    --Armor values :steamhappy:
     if armorvalue > 119 then
         ply:EmitSound("superheavy")
         ply:EmitSound("bass")
@@ -83,10 +87,19 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         ply:EmitSound("light")
     end
 
-    if (weaponcategories[weapon.SubCategory]) and ply:KeyDown(IN_SPEED) then
+    --Weapon rattle sound code
+    if (weaponcategories[weapon.SubCategory]) and ply:KeyDown(IN_SPEED) then 
         if (ply.RattleTime or 0) < CurTime() then
-            ply:EmitSound(weaponcategories[weapon.SubCategory]) -- Play weapon rattle sound
+            ply:EmitSound(weaponcategories[weapon.SubCategory])
             ply.RattleTime = CurTime() + 0.5
+        end
+    end
+
+    --Wood creak sound code
+    if materialtype == MAT_WOOD then
+        if (ply.WoodCreakTime or 0) < CurTime() then
+            ply:EmitSound("wood.creak")
+            ply.WoodCreakTime = CurTime() + 4
         end
     end
 
@@ -95,6 +108,10 @@ end)
 
 hook.Add("OnPlayerHitGround", "LandSound", function(ply)
     ply:EmitSound("land")
+end)
+
+hook.Add("OnPlayerJump", "JumpSound", function(ply)
+    ply:EmitSound("superheavy")
 end)
 
 function IndoorCheck(ply)
