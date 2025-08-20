@@ -120,6 +120,30 @@ sound.Add({
 })
 
 sound.Add({
+    name = "rock.walk",
+    channel = 204,
+    volume = 1,
+    level = 80,
+    pitch = {80,110},
+    sound = {"steps/rock-walk-01.ogg", "steps/rock-walk-02.ogg", "steps/rock-walk-03.ogg",
+             "steps/rock-walk-04.ogg", "steps/rock-walk-05.ogg", "steps/rock-walk-06.ogg",
+             "steps/rock-walk-07.ogg", "steps/rock-walk-08.ogg", "steps/rock-walk-09.ogg",
+             "steps/rock-walk-10.ogg"}
+})
+
+sound.Add({
+    name = "rock.sprint",
+    channel = 204,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/rock-sprint-01.ogg", "steps/rock-sprint-02.ogg", "steps/rock-sprint-03.ogg",
+             "steps/rock-sprint-04.ogg", "steps/rock-sprint-05.ogg", "steps/rock-sprint-06.ogg",
+             "steps/rock-sprint-07.ogg", "steps/rock-sprint-08.ogg", "steps/rock-sprint-09.ogg",
+             "steps/rock-sprint-10.ogg"}
+})
+
+sound.Add({
     name = "grass.walk",
     channel = 204,
     volume = 0.5,

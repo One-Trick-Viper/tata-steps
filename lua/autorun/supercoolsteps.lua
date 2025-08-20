@@ -11,12 +11,14 @@ local weaponcategories = {
 local surfacefootsteps = {
     [0] = "tarmac.walk",
     [30] = "tarmac.walk",
+    [31] = "rock.walk",
     [12] = "grass.walk",
     [9] = "dirt.walk",
     [3] = "metal.walk",
     [6] = "metalgrate.walk",
     [44] = "snow.walk",
     [21] = "woodpanel.walk",
+    [18] = "wood.walk",
     [14] = "wood.walk",
     [13] = "tile.walk",
     [34] = "gravel.walk",
@@ -33,12 +35,14 @@ local surfacefootsteps = {
 local surfacefootstepssprinting = {
     [0] = "tarmac.sprint",
     [30] = "tarmac.sprint",
+    [31] = "rock.sprint",
     [12] = "grass.sprint",
     [9] = "dirt.sprint",
     [3] = "metal.sprint",
     [6] = "metalgrate.sprint",
     [44] = "snow.sprint",
     [21] = "woodpanel.sprint",
+    [18] = "wood.sprint",
     [14] = "wood.sprint",
     [13] = "tile.sprint",
     [34] = "gravel.sprint",
@@ -73,7 +77,7 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         endpos = ply:GetPos() + Vector(0, 0, -10),
         filter = ply
     })
-    -- print(tr.SurfaceProps)
+    print(tr.SurfaceProps)
     local materialtype = tr.SurfaceProps or 30
     -- PrintTable(tr)
 
@@ -96,7 +100,7 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
 
         if IndoorCheck(ply) then
             if (materialtype == 30 or materialtype == 13 or materialtype == 3 or materialtype ==
-                14 or materialtype == 0) and IndoorCheck(ply) then
+                14 or materialtype == 0 or materialtype == 18) and IndoorCheck(ply) then
                 ply:EmitSound(ply:KeyDown(IN_SPEED) and "indoor.sprint" or "indoor.walk")
             end
         else
@@ -128,10 +132,10 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
     end
 
     --Wood creak sound code
-    if materialtype == 14 then
+    if (materialtype == 14 or materialtype == 18) then
         if (ply.WoodCreakTime or 0) < CurTime() then
             ply:EmitSound("wood.creak")
-            ply.WoodCreakTime = CurTime() + 3
+            ply.WoodCreakTime = CurTime() + 4
         end
     end
 
