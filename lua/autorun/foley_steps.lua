@@ -257,6 +257,158 @@ sound.Add({
 })
 
 sound.Add({
+    name = "metalthin.walk",
+    channel = 204,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/metalthin-walk-01.ogg", "steps/metalthin-walk-02.ogg", "steps/metalthin-walk-03.ogg",
+             "steps/metalthin-walk-04.ogg", "steps/metalthin-walk-05.ogg", "steps/metalthin-walk-06.ogg",
+             "steps/metalthin-walk-07.ogg", "steps/metalthin-walk-08.ogg"}
+})
+
+sound.Add({
+    name = "metalthin.sprint",
+    channel = 204,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/metalthin-sprint-01.ogg", "steps/metalthin-sprint-02.ogg", "steps/metalthin-sprint-03.ogg",
+             "steps/metalthin-sprint-04.ogg", "steps/metalthin-sprint-05.ogg", "steps/metalthin-sprint-06.ogg",
+             "steps/metalthin-sprint-07.ogg", "steps/metalthin-sprint-08.ogg"}
+})
+
+sound.Add({
+    name = "woodpanel.walk",
+    channel = 204,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/woodpanel-walk-01.ogg", "steps/woodpanel-walk-02.ogg", "steps/woodpanel-walk-03.ogg",
+             "steps/woodpanel-walk-04.ogg", "steps/woodpanel-walk-05.ogg", "steps/woodpanel-walk-06.ogg",
+             "steps/woodpanel-walk-07.ogg", "steps/woodpanel-walk-08.ogg"}
+})
+
+sound.Add({
+    name = "woodpanel.sprint",
+    channel = 204,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/woodpanel-sprint-01.ogg", "steps/woodpanel-sprint-02.ogg", "steps/woodpanel-sprint-03.ogg",
+             "steps/woodpanel-sprint-04.ogg", "steps/woodpanel-sprint-05.ogg", "steps/woodpanel-sprint-06.ogg",
+             "steps/woodpanel-sprint-07.ogg", "steps/woodpanel-sprint-08.ogg"}
+})
+
+sound.Add({
+    name = "glass.walk",
+    channel = 204,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/glass-walk-01.ogg", "steps/glass-walk-02.ogg", "steps/glass-walk-03.ogg", "steps/glass-walk-04.ogg",
+             "steps/glass-walk-05.ogg", "steps/glass-walk-06.ogg", "steps/glass-walk-07.ogg", "steps/glass-walk-08.ogg"}
+})
+
+sound.Add({
+    name = "glass.sprint",
+    channel = 204,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/glass-sprint-01.ogg", "steps/glass-sprint-02.ogg", "steps/glass-sprint-03.ogg",
+             "steps/glass-sprint-04.ogg", "steps/glass-sprint-05.ogg", "steps/glass-sprint-06.ogg",
+             "steps/glass-sprint-07.ogg", "steps/glass-sprint-08.ogg"}
+})
+
+sound.Add({
+    name = "woodcrate.walk",
+    channel = 204,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/woodcrate-walk-01.ogg", "steps/woodcrate-walk-02.ogg", "steps/woodcrate-walk-03.ogg", "steps/woodcrate-walk-04.ogg",
+             "steps/woodcrate-walk-05.ogg", "steps/woodcrate-walk-06.ogg", "steps/woodcrate-walk-07.ogg", "steps/woodcrate-walk-08.ogg"}
+})
+
+sound.Add({
+    name = "woodcrate.sprint",
+    channel = 204,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/woodcrate-sprint-01.ogg", "steps/woodcrate-sprint-02.ogg", "steps/woodcrate-sprint-03.ogg",
+             "steps/woodcrate-sprint-04.ogg", "steps/woodcrate-sprint-05.ogg", "steps/woodcrate-sprint-06.ogg",
+             "steps/woodcrate-sprint-07.ogg", "steps/woodcrate-sprint-08.ogg"}
+})
+
+sound.Add({
+    name = "chainlink.walk",
+    channel = 204,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/chainlink-walk-01.ogg", "steps/chainlink-walk-02.ogg", "steps/chainlink-walk-03.ogg",
+             "steps/chainlink-walk-04.ogg", "steps/chainlink-walk-05.ogg", "steps/chainlink-walk-06.ogg",
+             "steps/chainlink-walk-07.ogg"}
+})
+
+sound.Add({
+    name = "chainlink.sprint",
+    channel = 204,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/chainlink-sprint-01.ogg", "steps/chainlink-sprint-02.ogg", "steps/chainlink-sprint-03.ogg",
+             "steps/chainlink-sprint-04.ogg", "steps/chainlink-sprint-05.ogg", "steps/chainlink-sprint-06.ogg",
+             "steps/chainlink-sprint-07.ogg"}
+})
+
+sound.Add({
+    name = "plastic.walk",
+    channel = 204,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/plastic-walk-01.ogg", "steps/plastic-walk-02.ogg", "steps/plastic-walk-03.ogg",
+             "steps/plastic-walk-04.ogg", "steps/plastic-walk-05.ogg", "steps/plastic-walk-06.ogg",
+             "steps/plastic-walk-07.ogg"}
+})
+
+sound.Add({
+    name = "plastic.sprint",
+    channel = 204,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/plastic-sprint-01.ogg", "steps/plastic-sprint-02.ogg", "steps/plastic-sprint-03.ogg",
+             "steps/plastic-sprint-04.ogg", "steps/plastic-sprint-05.ogg", "steps/plastic-sprint-06.ogg",
+             "steps/plastic-sprint-07.ogg"}
+})
+
+sound.Add({
+    name = "gravel.walk",
+    channel = 204,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/gravel-walk-01.ogg", "steps/gravel-walk-02.ogg", "steps/gravel-walk-03.ogg",
+             "steps/gravel-walk-04.ogg", "steps/gravel-walk-05.ogg", "steps/gravel-walk-06.ogg",
+             "steps/gravel-walk-07.ogg", "steps/gravel-walk-08.ogg"}
+})
+
+sound.Add({
+    name = "gravel.sprint",
+    channel = 204,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/gravel-sprint-01.ogg", "steps/gravel-sprint-02.ogg", "steps/gravel-sprint-03.ogg",
+             "steps/gravel-sprint-04.ogg", "steps/gravel-sprint-05.ogg", "steps/gravel-sprint-06.ogg",
+             "steps/gravel-sprint-07.ogg", "steps/gravel-sprint-08.ogg"}
+})
+
+sound.Add({
     name = "wood.creak",
     channel = 211,
     volume = 1,
@@ -287,6 +439,28 @@ sound.Add({
              "steps/tile-sprint-04.ogg", "steps/tile-sprint-05.ogg", "steps/tile-sprint-06.ogg",
              "steps/tile-sprint-07.ogg", "steps/tile-sprint-08.ogg", "steps/tile-sprint-09.ogg",
              "steps/tile-sprint-10.ogg"}
+})
+
+sound.Add({
+    name = "mud.walk",
+    channel = 204,
+    volume = 1,
+    level = 80,
+    pitch = {130},
+    sound = {"steps/mud-walk-01.ogg", "steps/mud-walk-02.ogg", "steps/mud-walk-03.ogg", "steps/mud-walk-04.ogg",
+             "steps/mud-walk-05.ogg", "steps/mud-walk-06.ogg", "steps/mud-walk-07.ogg", "steps/mud-walk-08.ogg",
+             "steps/mud-walk-09.ogg", "steps/mud-walk-10.ogg"}
+})
+
+sound.Add({
+    name = "mud.sprint",
+    channel = 204,
+    volume = 1,
+    level = 80,
+    pitch = {130},
+    sound = {"steps/mud-sprint-01.ogg", "steps/mud-sprint-02.ogg", "steps/mud-sprint-03.ogg", "steps/mud-sprint-04.ogg",
+             "steps/mud-sprint-05.ogg", "steps/mud-sprint-06.ogg", "steps/mud-sprint-07.ogg", "steps/mud-sprint-08.ogg",
+             "steps/mud-sprint-09.ogg", "steps/mud-sprint-10.ogg"}
 })
 
 sound.Add({

@@ -9,25 +9,45 @@ local weaponcategories = {
 }
 
 local surfacefootsteps = {
-    [MAT_CONCRETE] = "tarmac.walk",
-    [MAT_GRASS] = "grass.walk",
-    [MAT_DIRT] = "dirt.walk",
-    [MAT_METAL] = "metal.walk",
-    [MAT_SNOW] = "snow.walk",
-    [MAT_WOOD] = "wood.walk",
-    [MAT_TILE] = "tile.walk",
-    [MAT_SAND] = "sand.walk"
+    [0] = "tarmac.walk",
+    [30] = "tarmac.walk",
+    [12] = "grass.walk",
+    [9] = "dirt.walk",
+    [3] = "metal.walk",
+    [44] = "snow.walk",
+    [21] = "woodpanel.walk",
+    [14] = "wood.walk",
+    [13] = "tile.walk",
+    [34] = "gravel.walk",
+    [10] = "mud.walk",
+    [54] = "sand.walk",
+    [7] = "metalthin.walk",
+    [37] = "chainlink.walk",
+    [55] = "plastic.walk",
+    [28] = "glass.walk",
+    [17] = "woodcrate.walk",
+    [46] = "carpet.walk",
 }
 
 local surfacefootstepssprinting = {
-    [MAT_CONCRETE] = "tarmac.sprint",
-    [MAT_GRASS] = "grass.sprint",
-    [MAT_DIRT] = "dirt.sprint",
-    [MAT_METAL] = "metal.sprint",
-    [MAT_SNOW] = "snow.sprint",
-    [MAT_WOOD] = "wood.sprint",
-    [MAT_TILE] = "tile.sprint",
-    [MAT_SAND] = "sand.sprint"
+    [0] = "tarmac.sprint",
+    [30] = "tarmac.sprint",
+    [12] = "grass.sprint",
+    [9] = "dirt.sprint",
+    [3] = "metal.sprint",
+    [44] = "snow.sprint",
+    [21] = "woodpanel.sprint",
+    [14] = "wood.sprint",
+    [13] = "tile.sprint",
+    [34] = "gravel.sprint",
+    [10] = "mud.sprint",
+    [54] = "sand.sprint",
+    [7] = "metalthin.sprint",
+    [37] = "chainlink.sprint",
+    [55] = "plastic.sprint",
+    [28] = "glass.sprint",
+    [17] = "woodcrate.sprint",
+    [46] = "carpet.sprint",
 }
 
 hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, volume, rf)
@@ -36,7 +56,7 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
     local waterlevel = ply:WaterLevel()
 
     local rain = ents.FindByClass("func_precipitation") [1]
-    print( rain:GetInternalVariable( "preciptype" ) ) 
+    -- print( rain:GetInternalVariable( "preciptype" ) ) 
     local preciptype = 99
     if IsValid(rain) then
         preciptype = rain:GetInternalVariable( "preciptype" )
@@ -51,8 +71,8 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         endpos = ply:GetPos() + Vector(0, 0, -10),
         filter = ply
     })
-    -- print(tr.MatType)
-    local materialtype = tr.MatType or MAT_CONCRETE
+    print(tr.SurfaceProps)
+    local materialtype = tr.SurfaceProps or 30
     -- PrintTable(tr)
 
     if (sprinting[materialtype]) then -- lets play the sounds lol
@@ -106,10 +126,10 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
     end
 
     --Wood creak sound code
-    if materialtype == MAT_WOOD then
+    if materialtype == 14 then
         if (ply.WoodCreakTime or 0) < CurTime() then
             ply:EmitSound("wood.creak")
-            ply.WoodCreakTime = CurTime() + 4
+            ply.WoodCreakTime = CurTime() + 3
         end
     end
 
