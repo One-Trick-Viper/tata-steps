@@ -98,9 +98,9 @@ sound.Add({
 sound.Add({
     name = "tarmac.walk",
     channel = 204,
-    volume = 0.5,
+    volume = 1,
     level = 80,
-    pitch = {95, 110},
+    pitch = {80,110},
     sound = {"steps/tarmac-walk-01.ogg", "steps/tarmac-walk-02.ogg", "steps/tarmac-walk-03.ogg",
              "steps/tarmac-walk-04.ogg", "steps/tarmac-walk-05.ogg", "steps/tarmac-walk-06.ogg",
              "steps/tarmac-walk-07.ogg", "steps/tarmac-walk-08.ogg", "steps/tarmac-walk-09.ogg",
@@ -110,7 +110,7 @@ sound.Add({
 sound.Add({
     name = "tarmac.sprint",
     channel = 204,
-    volume = 0.5,
+    volume = 1,
     level = 80,
     pitch = {95, 110},
     sound = {"steps/tarmac-sprint-01.ogg", "steps/tarmac-sprint-02.ogg", "steps/tarmac-sprint-03.ogg",
@@ -186,6 +186,28 @@ sound.Add({
              "steps/metal-sprint-04.ogg", "steps/metal-sprint-05.ogg", "steps/metal-sprint-06.ogg",
              "steps/metal-sprint-07.ogg", "steps/metal-sprint-08.ogg", "steps/metal-sprint-09.ogg",
              "steps/metal-sprint-10.ogg"}
+})
+
+sound.Add({
+    name = "metalgrate.walk",
+    channel = 204,
+    volume = 0.5,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/metalgrate-walk-01.ogg", "steps/metalgrate-walk-02.ogg", "steps/metalgrate-walk-03.ogg",
+             "steps/metalgrate-walk-04.ogg", "steps/metalgrate-walk-05.ogg", "steps/metalgrate-walk-06.ogg",
+             "steps/metalgrate-walk-07.ogg", "steps/metalgrate-walk-08.ogg", "steps/metalgrate-walk-09.ogg"}
+})
+
+sound.Add({
+    name = "metalgrate.sprint",
+    channel = 204,
+    volume = 0.5,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/metalgrate-sprint-01.ogg", "steps/metalgrate-sprint-02.ogg", "steps/metalgrate-sprint-03.ogg",
+             "steps/metalgrate-sprint-04.ogg", "steps/metalgrate-sprint-05.ogg", "steps/metalgrate-sprint-06.ogg",
+             "steps/metalgrate-sprint-07.ogg", "steps/metalgrate-sprint-08.ogg", "steps/metalgrate-sprint-09.ogg"}
 })
 
 sound.Add({
@@ -327,8 +349,9 @@ sound.Add({
     volume = 1,
     level = 80,
     pitch = {95, 110},
-    sound = {"steps/woodcrate-walk-01.ogg", "steps/woodcrate-walk-02.ogg", "steps/woodcrate-walk-03.ogg", "steps/woodcrate-walk-04.ogg",
-             "steps/woodcrate-walk-05.ogg", "steps/woodcrate-walk-06.ogg", "steps/woodcrate-walk-07.ogg", "steps/woodcrate-walk-08.ogg"}
+    sound = {"steps/woodcrate-walk-01.ogg", "steps/woodcrate-walk-02.ogg", "steps/woodcrate-walk-03.ogg",
+             "steps/woodcrate-walk-04.ogg", "steps/woodcrate-walk-05.ogg", "steps/woodcrate-walk-06.ogg",
+             "steps/woodcrate-walk-07.ogg", "steps/woodcrate-walk-08.ogg"}
 })
 
 sound.Add({
@@ -423,10 +446,9 @@ sound.Add({
     channel = 204,
     volume = 1,
     level = 80,
-    pitch = {130},
+    pitch = {150},
     sound = {"steps/tile-walk-01.ogg", "steps/tile-walk-02.ogg", "steps/tile-walk-03.ogg", "steps/tile-walk-04.ogg",
-             "steps/tile-walk-05.ogg", "steps/tile-walk-06.ogg", "steps/tile-walk-07.ogg", "steps/tile-walk-08.ogg",
-             "steps/tile-walk-09.ogg", "steps/tile-walk-10.ogg"}
+             "steps/tile-walk-05.ogg", "steps/tile-walk-06.ogg", "steps/tile-walk-07.ogg", "steps/tile-walk-08.ogg"}
 })
 
 sound.Add({
@@ -434,11 +456,10 @@ sound.Add({
     channel = 204,
     volume = 1,
     level = 80,
-    pitch = {130},
+    pitch = {150},
     sound = {"steps/tile-sprint-01.ogg", "steps/tile-sprint-02.ogg", "steps/tile-sprint-03.ogg",
              "steps/tile-sprint-04.ogg", "steps/tile-sprint-05.ogg", "steps/tile-sprint-06.ogg",
-             "steps/tile-sprint-07.ogg", "steps/tile-sprint-08.ogg", "steps/tile-sprint-09.ogg",
-             "steps/tile-sprint-10.ogg"}
+             "steps/tile-sprint-07.ogg", "steps/tile-sprint-08.ogg"}
 })
 
 sound.Add({
@@ -446,7 +467,7 @@ sound.Add({
     channel = 204,
     volume = 1,
     level = 80,
-    pitch = {130},
+    pitch = {80,110},
     sound = {"steps/mud-walk-01.ogg", "steps/mud-walk-02.ogg", "steps/mud-walk-03.ogg", "steps/mud-walk-04.ogg",
              "steps/mud-walk-05.ogg", "steps/mud-walk-06.ogg", "steps/mud-walk-07.ogg", "steps/mud-walk-08.ogg",
              "steps/mud-walk-09.ogg", "steps/mud-walk-10.ogg"}
@@ -457,7 +478,7 @@ sound.Add({
     channel = 204,
     volume = 1,
     level = 80,
-    pitch = {130},
+    pitch = {80,110},
     sound = {"steps/mud-sprint-01.ogg", "steps/mud-sprint-02.ogg", "steps/mud-sprint-03.ogg", "steps/mud-sprint-04.ogg",
              "steps/mud-sprint-05.ogg", "steps/mud-sprint-06.ogg", "steps/mud-sprint-07.ogg", "steps/mud-sprint-08.ogg",
              "steps/mud-sprint-09.ogg", "steps/mud-sprint-10.ogg"}

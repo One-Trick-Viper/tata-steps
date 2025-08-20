@@ -14,6 +14,7 @@ local surfacefootsteps = {
     [12] = "grass.walk",
     [9] = "dirt.walk",
     [3] = "metal.walk",
+    [6] = "metalgrate.walk",
     [44] = "snow.walk",
     [21] = "woodpanel.walk",
     [14] = "wood.walk",
@@ -35,6 +36,7 @@ local surfacefootstepssprinting = {
     [12] = "grass.sprint",
     [9] = "dirt.sprint",
     [3] = "metal.sprint",
+    [6] = "metalgrate.sprint",
     [44] = "snow.sprint",
     [21] = "woodpanel.sprint",
     [14] = "wood.sprint",
@@ -93,8 +95,8 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         end
 
         if IndoorCheck(ply) then
-            if (materialtype == MAT_CONCRETE or materialtype == MAT_TILE or materialtype == MAT_METAL or materialtype ==
-                MAT_WOOD) and IndoorCheck(ply) then
+            if (materialtype == 30 or materialtype == 13 or materialtype == 3 or materialtype ==
+                14 or materialtype == 0) and IndoorCheck(ply) then
                 ply:EmitSound(ply:KeyDown(IN_SPEED) and "indoor.sprint" or "indoor.walk")
             end
         else
