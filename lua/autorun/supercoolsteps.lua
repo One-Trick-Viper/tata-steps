@@ -71,7 +71,7 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         endpos = ply:GetPos() + Vector(0, 0, -10),
         filter = ply
     })
-    print(tr.SurfaceProps)
+    -- print(tr.SurfaceProps)
     local materialtype = tr.SurfaceProps or 30
     -- PrintTable(tr)
 
