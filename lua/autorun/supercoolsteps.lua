@@ -12,11 +12,13 @@ local surfacefootsteps = {
     [0] = "tarmac.walk",
     [30] = "tarmac.walk",
     [31] = "rock.walk",
+    [33] = "rock.walk",
     [12] = "grass.walk",
     [9] = "dirt.walk",
     [3] = "metal.walk",
     [81] = "metalhollow.walk",
     [66] = "metalhollow.walk",
+    [8] = "metalhollow.walk",
     [6] = "metalgrate.walk",
     [44] = "snow.walk",
     [21] = "woodpanel.walk",
@@ -32,17 +34,20 @@ local surfacefootsteps = {
     [28] = "glass.walk",
     [17] = "woodcrate.walk",
     [46] = "carpet.walk",
+    [47] = "carpet.walk",
 }
 
 local surfacefootstepssprinting = {
     [0] = "tarmac.sprint",
     [30] = "tarmac.sprint",
     [31] = "rock.sprint",
+    [33] = "rock.sprint",
     [12] = "grass.sprint",
     [9] = "dirt.sprint",
     [3] = "metal.sprint",
     [81] = "metalhollow.sprint",
     [66] = "metalhollow.sprint",
+    [8] = "metalhollow.sprint",
     [6] = "metalgrate.sprint",
     [44] = "snow.sprint",
     [21] = "woodpanel.sprint",
@@ -58,6 +63,7 @@ local surfacefootstepssprinting = {
     [28] = "glass.sprint",
     [17] = "woodcrate.sprint",
     [46] = "carpet.sprint",
+    [47] = "carpet.sprint",
 }
 
 hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, volume, rf)
@@ -81,7 +87,7 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         endpos = ply:GetPos() + Vector(0, 0, -10),
         filter = ply
     })
-    -- print(tr.SurfaceProps)
+    print(tr.SurfaceProps)
     local materialtype = tr.SurfaceProps or 30
     -- PrintTable(tr)
 
@@ -106,6 +112,7 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
             if (materialtype == 30 or materialtype == 13 or materialtype == 3 or materialtype ==
                 14 or materialtype == 0 or materialtype == 18) and IndoorCheck(ply) then
                 ply:EmitSound(ply:KeyDown(IN_SPEED) and "indoor.sprint" or "indoor.walk")
+                else
             end
         else
             if israining then
@@ -171,24 +178,24 @@ hook.Add("PlayerTick", "PlayerBreathing", function(ply)
         return
     end
 
-    if ply:KeyDown(IN_SPEED) and ply:IsOnGround() and ply:GetVelocity():Length() > 100 then
-        if ply.BreathingStartTime == nil then
-            ply.BreathingStartTime = CurTime()
-        end
-        -- print(ply.BreathingStartTime)
-        if CurTime() > ply.BreathingStartTime + 10 then
-            if ply.BreathingPlayed == nil then
-                ply:EmitSound("breath.loop")
-                ply.BreathingPlayed = true
-            end
-        end
-    else
-        ply.BreathingStartTime = nil
-        if ply.BreathingPlayed == true then
-            ply:EmitSound("breath.end")
-        end
-        ply.BreathingPlayed = nil
-    end
+    -- if ply:KeyDown(IN_SPEED) and ply:IsOnGround() and ply:GetVelocity():Length() > 100 then
+    --     if ply.BreathingStartTime == nil then
+    --         ply.BreathingStartTime = CurTime()
+    --     end
+    --     -- print(ply.BreathingStartTime)
+    --     if CurTime() > ply.BreathingStartTime + 10 then
+    --         if ply.BreathingPlayed == nil then
+    --             ply:EmitSound("breath.loop")
+    --             ply.BreathingPlayed = true
+    --         end
+    --     end
+    -- else
+    --     ply.BreathingStartTime = nil
+    --     if ply.BreathingPlayed == true then
+    --         ply:EmitSound("breath.end")
+    --     end
+    --     ply.BreathingPlayed = nil
+    -- end
 
     if ply:KeyDown(IN_DUCK) and ply:IsOnGround() then
         if ply.PlayerCrouched == nil then

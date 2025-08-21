@@ -28,7 +28,7 @@ sound.Add({
 sound.Add({
     name = "fatigues.walk",
     channel = 207,
-    volume = 1,
+    volume = 0.5,
     level = 80,
     pitch = {95, 110},
     sound = {"gear/fatigues-walk-01.ogg", "gear/fatigues-walk-02.ogg", "gear/fatigues-walk-03.ogg",
@@ -40,7 +40,7 @@ sound.Add({
 sound.Add({
     name = "fatigues.sprint",
     channel = 207,
-    volume = 1,
+    volume = 0.5,
     level = 80,
     pitch = {95, 110},
     sound = {"gear/fatigues-sprint-01.ogg", "gear/fatigues-sprint-02.ogg", "gear/fatigues-sprint-03.ogg",
