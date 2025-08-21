@@ -15,6 +15,8 @@ local surfacefootsteps = {
     [12] = "grass.walk",
     [9] = "dirt.walk",
     [3] = "metal.walk",
+    [81] = "metalhollow.walk",
+    [66] = "metalhollow.walk",
     [6] = "metalgrate.walk",
     [44] = "snow.walk",
     [21] = "woodpanel.walk",
@@ -39,6 +41,8 @@ local surfacefootstepssprinting = {
     [12] = "grass.sprint",
     [9] = "dirt.sprint",
     [3] = "metal.sprint",
+    [81] = "metalhollow.sprint",
+    [66] = "metalhollow.sprint",
     [6] = "metalgrate.sprint",
     [44] = "snow.sprint",
     [21] = "woodpanel.sprint",
@@ -77,7 +81,7 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         endpos = ply:GetPos() + Vector(0, 0, -10),
         filter = ply
     })
-    print(tr.SurfaceProps)
+    -- print(tr.SurfaceProps)
     local materialtype = tr.SurfaceProps or 30
     -- PrintTable(tr)
 

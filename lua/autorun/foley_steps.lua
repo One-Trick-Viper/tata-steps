@@ -100,7 +100,7 @@ sound.Add({
     channel = 204,
     volume = 1,
     level = 80,
-    pitch = {80,110},
+    pitch = {80, 110},
     sound = {"steps/tarmac-walk-01.ogg", "steps/tarmac-walk-02.ogg", "steps/tarmac-walk-03.ogg",
              "steps/tarmac-walk-04.ogg", "steps/tarmac-walk-05.ogg", "steps/tarmac-walk-06.ogg",
              "steps/tarmac-walk-07.ogg", "steps/tarmac-walk-08.ogg", "steps/tarmac-walk-09.ogg",
@@ -124,11 +124,10 @@ sound.Add({
     channel = 204,
     volume = 1,
     level = 80,
-    pitch = {80,110},
-    sound = {"steps/rock-walk-01.ogg", "steps/rock-walk-02.ogg", "steps/rock-walk-03.ogg",
-             "steps/rock-walk-04.ogg", "steps/rock-walk-05.ogg", "steps/rock-walk-06.ogg",
-             "steps/rock-walk-07.ogg", "steps/rock-walk-08.ogg", "steps/rock-walk-09.ogg",
-             "steps/rock-walk-10.ogg"}
+    pitch = {80, 110},
+    sound = {"steps/rock-walk-01.ogg", "steps/rock-walk-02.ogg", "steps/rock-walk-03.ogg", "steps/rock-walk-04.ogg",
+             "steps/rock-walk-05.ogg", "steps/rock-walk-06.ogg", "steps/rock-walk-07.ogg", "steps/rock-walk-08.ogg",
+             "steps/rock-walk-09.ogg", "steps/rock-walk-10.ogg"}
 })
 
 sound.Add({
@@ -210,6 +209,28 @@ sound.Add({
              "steps/metal-sprint-04.ogg", "steps/metal-sprint-05.ogg", "steps/metal-sprint-06.ogg",
              "steps/metal-sprint-07.ogg", "steps/metal-sprint-08.ogg", "steps/metal-sprint-09.ogg",
              "steps/metal-sprint-10.ogg"}
+})
+
+sound.Add({
+    name = "metalhollow.walk",
+    channel = 204,
+    volume = 0.5,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/metalhollow-walk-01.ogg", "steps/metalhollow-walk-02.ogg", "steps/metalhollow-walk-03.ogg",
+             "steps/metalhollow-walk-04.ogg", "steps/metalhollow-walk-05.ogg", "steps/metalhollow-walk-06.ogg",
+             "steps/metalhollow-walk-07.ogg", "steps/metalhollow-walk-08.ogg"}
+})
+
+sound.Add({
+    name = "metalhollow.sprint",
+    channel = 204,
+    volume = 0.5,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/metalhollow-sprint-01.ogg", "steps/metalhollow-sprint-02.ogg", "steps/metalhollow-sprint-03.ogg",
+             "steps/metalhollow-sprint-04.ogg", "steps/metalhollow-sprint-05.ogg", "steps/metalhollow-sprint-06.ogg",
+             "steps/metalhollow-sprint-07.ogg", "steps/metalhollow-sprint-08.ogg"}
 })
 
 sound.Add({
@@ -491,7 +512,7 @@ sound.Add({
     channel = 204,
     volume = 1,
     level = 80,
-    pitch = {80,110},
+    pitch = {80, 110},
     sound = {"steps/mud-walk-01.ogg", "steps/mud-walk-02.ogg", "steps/mud-walk-03.ogg", "steps/mud-walk-04.ogg",
              "steps/mud-walk-05.ogg", "steps/mud-walk-06.ogg", "steps/mud-walk-07.ogg", "steps/mud-walk-08.ogg",
              "steps/mud-walk-09.ogg", "steps/mud-walk-10.ogg"}
@@ -502,7 +523,7 @@ sound.Add({
     channel = 204,
     volume = 1,
     level = 80,
-    pitch = {80,110},
+    pitch = {80, 110},
     sound = {"steps/mud-sprint-01.ogg", "steps/mud-sprint-02.ogg", "steps/mud-sprint-03.ogg", "steps/mud-sprint-04.ogg",
              "steps/mud-sprint-05.ogg", "steps/mud-sprint-06.ogg", "steps/mud-sprint-07.ogg", "steps/mud-sprint-08.ogg",
              "steps/mud-sprint-09.ogg", "steps/mud-sprint-10.ogg"}
@@ -516,7 +537,7 @@ sound.Add({
     pitch = {95, 110},
     sound = {"steps/sand-walk-01.ogg", "steps/sand-walk-02.ogg", "steps/sand-walk-03.ogg", "steps/sand-walk-04.ogg",
              "steps/sand-walk-05.ogg", "steps/sand-walk-06.ogg", "steps/sand-walk-07.ogg", "steps/sand-walk-08.ogg",
-             "steps/sand-walk-09.ogg", "steps/sand-walk-10.ogg"}
+             "steps/sand-walk-09.ogg"}
 })
 
 sound.Add({
@@ -527,6 +548,5 @@ sound.Add({
     pitch = {95, 110},
     sound = {"steps/sand-sprint-01.ogg", "steps/sand-sprint-02.ogg", "steps/sand-sprint-03.ogg",
              "steps/sand-sprint-04.ogg", "steps/sand-sprint-05.ogg", "steps/sand-sprint-06.ogg",
-             "steps/sand-sprint-07.ogg", "steps/sand-sprint-08.ogg", "steps/sand-sprint-09.ogg",
-             "steps/sand-sprint-10.ogg"}
+             "steps/sand-sprint-07.ogg", "steps/sand-sprint-08.ogg", "steps/sand-sprint-09.ogg"}
 })
