@@ -28,7 +28,7 @@ sound.Add({
 sound.Add({
     name = "fatigues.walk",
     channel = 207,
-    volume = 0.5,
+    volume = 1,
     level = 80,
     pitch = {95, 110},
     sound = {"gear/fatigues-walk-01.ogg", "gear/fatigues-walk-02.ogg", "gear/fatigues-walk-03.ogg",
@@ -40,7 +40,7 @@ sound.Add({
 sound.Add({
     name = "fatigues.sprint",
     channel = 207,
-    volume = 0.5,
+    volume = 1,
     level = 80,
     pitch = {95, 110},
     sound = {"gear/fatigues-sprint-01.ogg", "gear/fatigues-sprint-02.ogg", "gear/fatigues-sprint-03.ogg",
@@ -73,7 +73,7 @@ sound.Add({
 sound.Add({
     name = "heavy",
     channel = 208,
-    volume = 0.2,
+    volume = 0.6,
     level = 80,
     pitch = {95, 110},
     sound = {"gear/heavy-01.ogg", "gear/heavy-02.ogg", "gear/heavy-03.ogg", "gear/heavy-04.ogg", "gear/heavy-05.ogg",
@@ -83,13 +83,23 @@ sound.Add({
 sound.Add({
     name = "superheavy",
     channel = 208,
-    volume = 0.2,
+    volume = 1,
     level = 80,
     pitch = {95, 110},
-    sound = {"gear/superheavy-01.ogg", "gear/superheavy-02.ogg", "gear/superheavy-03.ogg", "gear/superheavy-04.ogg",
-             "gear/superheavy-05.ogg", "gear/superheavy-06.ogg", "gear/superheavy-07.ogg", "gear/superheavy-08.ogg",
-             "gear/superheavy-09.ogg"}
+    sound = {"gear/heavy-01.ogg", "gear/heavy-02.ogg", "gear/heavy-03.ogg", "gear/heavy-04.ogg", "gear/heavy-05.ogg",
+             "gear/heavy-06.ogg", "gear/heavy-07.ogg", "gear/heavy-08.ogg", "gear/heavy-09.ogg", "gear/heavy-10.ogg"}
 })
+
+-- sound.Add({
+--     name = "superheavy",
+--     channel = 208,
+--     volume = 0.2,
+--     level = 80,
+--     pitch = {95, 110},
+--     sound = {"gear/superheavy-01.ogg", "gear/superheavy-02.ogg", "gear/superheavy-03.ogg", "gear/superheavy-04.ogg",
+--              "gear/superheavy-05.ogg", "gear/superheavy-06.ogg", "gear/superheavy-07.ogg", "gear/superheavy-08.ogg",
+--              "gear/superheavy-09.ogg"}
+-- })
 
 sound.Add({
     name = "rattle.lmg",

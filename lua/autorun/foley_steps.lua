@@ -17,7 +17,7 @@ sound.Add({
 sound.Add({
     name = "indoor.walk",
     channel = 200,
-    volume = 0.35,
+    volume = 0.5,
     level = 80,
     pitch = {95, 110},
     sound = {"steps/indoor-walk-01.ogg", "steps/indoor-walk-02.ogg", "steps/indoor-walk-03.ogg",
@@ -29,7 +29,7 @@ sound.Add({
 sound.Add({
     name = "indoor.sprint",
     channel = 200,
-    volume = 0.35,
+    volume = 0.5,
     level = 80,
     pitch = {95, 110},
     sound = {"steps/indoor-layer-01.ogg", "steps/indoor-layer-02.ogg", "steps/indoor-layer-03.ogg",

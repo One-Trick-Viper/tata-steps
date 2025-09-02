@@ -1,11 +1,16 @@
 local weaponcategories = {
+    --Modern Warfare Base
     ["Assault Rifles"] = "rattle.rifle",
     ["Pistols"] = "rattle.pistol",
     ["Lightmachine Guns"] = "rattle.lmg",
     ["Submachine Guns"] = "rattle.smg",
     ["Shotguns"] = "rattle.generic",
     ["Sniper RIfles"] = "rattle.rifled",
-    ["Launchers"] = "rattle.launcher"
+    ["Launchers"] = "rattle.launcher",
+
+    --ARC9 INS1
+    ["Primary"] = "rattle.generic",
+    ["Sidearm"] = "rattle.pistol",
 }
 
 local surfacefootsteps = {
@@ -18,6 +23,7 @@ local surfacefootsteps = {
     [3] = "metal.walk",
     [81] = "metalhollow.walk",
     [66] = "metalhollow.walk",
+    [2] = "metalhollow.walk",
     [8] = "metalhollow.walk",
     [6] = "metalgrate.walk",
     [44] = "snow.walk",
@@ -48,6 +54,7 @@ local surfacefootstepssprinting = {
     [81] = "metalhollow.sprint",
     [66] = "metalhollow.sprint",
     [8] = "metalhollow.sprint",
+    [2] = "metalhollow.sprint",
     [6] = "metalgrate.sprint",
     [44] = "snow.sprint",
     [21] = "woodpanel.sprint",
@@ -87,7 +94,7 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         endpos = ply:GetPos() + Vector(0, 0, -10),
         filter = ply
     })
-    print(tr.SurfaceProps)
+    -- print(tr.SurfaceProps)
     local materialtype = tr.SurfaceProps or 30
     -- PrintTable(tr)
 
