@@ -50,30 +50,47 @@ sound.Add({
 })
 
 sound.Add({
-    name = "light",
-    channel = 208,
-    volume = 1,
+    name = "coat.walk",
+    channel = 211,
+    volume = 0.25,
     level = 80,
     pitch = {95, 110},
-    sound = {"gear/light-01.ogg", "gear/light-02.ogg", "gear/light-03.ogg", "gear/light-04.ogg", "gear/light-05.ogg",
-             "gear/light-06.ogg", "gear/light-07.ogg", "gear/light-08.ogg"}
+    sound = {"gear/coat-walk-01.ogg", "gear/coat-walk-02.ogg", "gear/coat-walk-03.ogg",
+             "gear/coat-walk-04.ogg", "gear/coat-walk-05.ogg"}
+})
+
+sound.Add({
+    name = "coat.sprint",
+    channel = 211,
+    volume = 0.25,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"gear/coat-sprint-01.ogg", "gear/coat-sprint-02.ogg", "gear/coat-sprint-03.ogg",
+             "gear/coat-sprint-04.ogg", "gear/coat-sprint-05.ogg"}
+})
+
+sound.Add({
+    name = "light",
+    channel = 208,
+    volume = 0.3,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"gear/light-01.ogg", "gear/light-02.ogg", "gear/light-03.ogg", "gear/light-04.ogg", "gear/light-05.ogg", "gear/light-06.ogg"}
 })
 
 sound.Add({
     name = "medium",
     channel = 208,
-    volume = 1,
+    volume = 0.3,
     level = 80,
     pitch = {95, 110},
-    sound = {"gear/medium-01.ogg", "gear/medium-02.ogg", "gear/medium-03.ogg", "gear/medium-04.ogg",
-             "gear/medium-05.ogg", "gear/medium-06.ogg", "gear/medium-07.ogg", "gear/medium-08.ogg",
-             "gear/medium-09.ogg", "gear/medium-10.ogg"}
+    sound = {"gear/medium-01.ogg", "gear/medium-02.ogg", "gear/medium-03.ogg", "gear/medium-04.ogg", "gear/medium-05.ogg", "gear/medium-06.ogg"}
 })
 
 sound.Add({
     name = "heavy",
     channel = 208,
-    volume = 0.6,
+    volume = 0.8,
     level = 80,
     pitch = {95, 110},
     sound = {"gear/heavy-01.ogg", "gear/heavy-02.ogg", "gear/heavy-03.ogg", "gear/heavy-04.ogg", "gear/heavy-05.ogg",
@@ -83,23 +100,11 @@ sound.Add({
 sound.Add({
     name = "superheavy",
     channel = 208,
-    volume = 1,
+    volume = 0.15,
     level = 80,
     pitch = {95, 110},
-    sound = {"gear/heavy-01.ogg", "gear/heavy-02.ogg", "gear/heavy-03.ogg", "gear/heavy-04.ogg", "gear/heavy-05.ogg",
-             "gear/heavy-06.ogg", "gear/heavy-07.ogg", "gear/heavy-08.ogg", "gear/heavy-09.ogg", "gear/heavy-10.ogg"}
+    sound = {"gear/superheavy-01.ogg", "gear/superheavy-02.ogg", "gear/superheavy-03.ogg", "gear/superheavy-04.ogg", "gear/superheavy-05.ogg"}
 })
-
--- sound.Add({
---     name = "superheavy",
---     channel = 208,
---     volume = 0.2,
---     level = 80,
---     pitch = {95, 110},
---     sound = {"gear/superheavy-01.ogg", "gear/superheavy-02.ogg", "gear/superheavy-03.ogg", "gear/superheavy-04.ogg",
---              "gear/superheavy-05.ogg", "gear/superheavy-06.ogg", "gear/superheavy-07.ogg", "gear/superheavy-08.ogg",
---              "gear/superheavy-09.ogg"}
--- })
 
 sound.Add({
     name = "rattle.lmg",
@@ -167,8 +172,17 @@ sound.Add({
 sound.Add({
     name = "bass",
     channel = 210,
-    volume = 0.3,
+    volume = 1,
     level = 80,
     pitch = {95, 110},
-    sound = {"steps/bass-01.ogg", "steps/bass-02.ogg", "steps/bass-03.ogg", "steps/bass-04.ogg", "steps/bass-05.ogg"}
+    sound = {"steps/bass-01.ogg", "steps/bass-02.ogg", "steps/bass-03.ogg", "steps/bass-04.ogg", "steps/bass-05.ogg", "steps/bass-06.ogg"}
+})
+
+sound.Add({
+    name = "jump",
+    channel = 212,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"gear/suit-t-01.ogg", "gear/suit-t-02.ogg", "gear/suit-t-03.ogg", "gear/suit-t-04.ogg"}
 })

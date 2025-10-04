@@ -1,3 +1,8 @@
+concommand.Add( "AddArmor", function( ply, cmd, args )
+	local Armor = args[1] or 100
+	ply:SetArmor( ply:Armor() + Armor )
+end )
+
 local weaponcategories = {
     --Modern Warfare Base
     ["Assault Rifles"] = "rattle.rifle",
@@ -102,6 +107,7 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         ply:EmitSound("scuffle.tarmac")
         ply:EmitSound(sprinting[materialtype])
         ply:EmitSound(ply:KeyDown(IN_SPEED) and "fatigues.sprint" or "fatigues.walk")
+        ply:EmitSound(ply:KeyDown(IN_SPEED) and "coat.sprint" or "coat.walk")
 
         if waterlevel == 1 then
             ply:EmitSound("water.ankle")
@@ -165,7 +171,7 @@ hook.Add("OnPlayerHitGround", "LandSound", function(ply)
 end)
 
 hook.Add("OnPlayerJump", "JumpSound", function(ply)
-    ply:EmitSound("superheavy")
+    ply:EmitSound("jump")
 end)
 
 function IndoorCheck(ply)
