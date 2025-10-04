@@ -14,6 +14,7 @@ local weaponcategories = {
 }
 
 local surfacefootsteps = {
+    [-1] = "tarmac.walk",
     [0] = "tarmac.walk",
     [30] = "tarmac.walk",
     [31] = "rock.walk",
@@ -44,6 +45,7 @@ local surfacefootsteps = {
 }
 
 local surfacefootstepssprinting = {
+    [-1] = "tarmac.sprint",
     [0] = "tarmac.sprint",
     [30] = "tarmac.sprint",
     [31] = "rock.sprint",
@@ -94,7 +96,7 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         endpos = ply:GetPos() + Vector(0, 0, -10),
         filter = ply
     })
-    -- print(tr.SurfaceProps)
+    print(tr.SurfaceProps)
     local materialtype = tr.SurfaceProps or 30
     -- PrintTable(tr)
 
