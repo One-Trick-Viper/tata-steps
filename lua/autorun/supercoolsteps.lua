@@ -1,8 +1,3 @@
-concommand.Add( "AddArmor", function( ply, cmd, args )
-	local Armor = args[1] or 100
-	ply:SetArmor( ply:Armor() + Armor )
-end )
-
 local weaponcategories = {
     --Modern Warfare Base
     ["Assault Rifles"] = "rattle.rifle",
