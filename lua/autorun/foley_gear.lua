@@ -71,7 +71,7 @@ sound.Add({
 
 sound.Add({
     name = "light",
-    channel = 304,
+    channel = 310,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -80,7 +80,7 @@ sound.Add({
 
 sound.Add({
     name = "medium",
-    channel = 304,
+    channel = 311,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -89,8 +89,8 @@ sound.Add({
 
 sound.Add({
     name = "heavy",
-    channel = 304,
-    volume = 0.35,
+    channel = 312,
+    volume = 0.15,
     level = 80,
     pitch = {95, 110},
     sound = {"gear/heavy-01.ogg", "gear/heavy-02.ogg", "gear/heavy-03.ogg", "gear/heavy-04.ogg", "gear/heavy-05.ogg","gear/heavy-06.ogg"}
@@ -98,7 +98,7 @@ sound.Add({
 
 sound.Add({
     name = "superheavy",
-    channel = 304,
+    channel = 313,
     volume = 0.15,
     level = 80,
     pitch = {95, 110},

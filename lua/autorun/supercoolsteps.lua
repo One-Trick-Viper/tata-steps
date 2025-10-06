@@ -120,7 +120,7 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
 
         if IndoorCheck(ply) then
             if (materialtype == 30 or materialtype == 13 or materialtype == 3 or materialtype ==
-                14 or materialtype == 0 or materialtype == 18) and IndoorCheck(ply) then
+                14 or materialtype == 0 or materialtype == 18 or materialtype == 31 or materialtype == 33) and IndoorCheck(ply) then
                 ply:EmitSound(ply:KeyDown(IN_SPEED) and "indoor.sprint" or "indoor.walk")
                 else
             end
@@ -133,15 +133,18 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
 
 
     --Armor values :steamhappy:
-    if armorvalue > 120 then
+    if armorvalue >= 120 then
         ply:EmitSound("superheavy")
         ply:EmitSound("bass")
-    elseif armorvalue > 60 then
+    elseif armorvalue >= 60 then
         ply:EmitSound("heavy")
-        ply:EmitSound("heavy_bass")
-    elseif armorvalue > 30 then
         ply:EmitSound("medium")
-    elseif armorvalue > 15 then
+        ply:EmitSound("light")
+        ply:EmitSound("heavy_bass")
+    elseif armorvalue >= 30 then
+        ply:EmitSound("medium")
+        ply:EmitSound("light")
+    elseif armorvalue >= 15 then
         ply:EmitSound("light")
     end
 
