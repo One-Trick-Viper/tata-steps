@@ -96,7 +96,7 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         endpos = ply:GetPos() + Vector(0, 0, -10),
         filter = ply
     })
-    print(tr.SurfaceProps)
+    -- print(tr.SurfaceProps)
     local materialtype = tr.SurfaceProps or 30
     -- PrintTable(tr)
 
@@ -138,6 +138,7 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         ply:EmitSound("bass")
     elseif armorvalue > 60 then
         ply:EmitSound("heavy")
+        ply:EmitSound("heavy_bass")
     elseif armorvalue > 30 then
         ply:EmitSound("medium")
     elseif armorvalue > 15 then

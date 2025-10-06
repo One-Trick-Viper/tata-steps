@@ -16,7 +16,7 @@ sound.Add({
 
 sound.Add({
     name = "indoor.walk",
-    channel = 200,
+    channel = 255,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -28,7 +28,7 @@ sound.Add({
 
 sound.Add({
     name = "indoor.sprint",
-    channel = 200,
+    channel = 255,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -40,7 +40,7 @@ sound.Add({
 
 sound.Add({
     name = "scuffle.tarmac",
-    channel = 201,
+    channel = 309,
     volume = 1.0,
     level = 80,
     pitch = {95, 110},
@@ -52,7 +52,7 @@ sound.Add({
 
 sound.Add({
     name = "wet.walk",
-    channel = 203,
+    channel = 310,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -63,7 +63,7 @@ sound.Add({
 
 sound.Add({
     name = "wet.sprint",
-    channel = 203,
+    channel = 310,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -74,7 +74,7 @@ sound.Add({
 
 sound.Add({
     name = "water.ankle",
-    channel = 203,
+    channel = 311,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -86,7 +86,7 @@ sound.Add({
 
 sound.Add({
     name = "water.waist",
-    channel = CHAN_STATIC,
+    channel = 311,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -97,7 +97,7 @@ sound.Add({
 
 sound.Add({
     name = "tarmac.walk",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {80, 110},
@@ -109,7 +109,7 @@ sound.Add({
 
 sound.Add({
     name = "tarmac.sprint",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -121,7 +121,7 @@ sound.Add({
 
 sound.Add({
     name = "rock.walk",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {80, 110},
@@ -132,7 +132,7 @@ sound.Add({
 
 sound.Add({
     name = "rock.sprint",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -144,7 +144,7 @@ sound.Add({
 
 sound.Add({
     name = "grass.walk",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -155,7 +155,7 @@ sound.Add({
 
 sound.Add({
     name = "grass.sprint",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -167,7 +167,7 @@ sound.Add({
 
 sound.Add({
     name = "dirt.walk",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -178,7 +178,7 @@ sound.Add({
 
 sound.Add({
     name = "dirt.sprint",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -190,7 +190,7 @@ sound.Add({
 
 sound.Add({
     name = "metal.walk",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -201,7 +201,7 @@ sound.Add({
 
 sound.Add({
     name = "metal.sprint",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -213,7 +213,7 @@ sound.Add({
 
 sound.Add({
     name = "metalhollow.walk",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -224,7 +224,7 @@ sound.Add({
 
 sound.Add({
     name = "metalhollow.sprint",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -235,7 +235,7 @@ sound.Add({
 
 sound.Add({
     name = "metalgrate.walk",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -246,7 +246,7 @@ sound.Add({
 
 sound.Add({
     name = "metalgrate.sprint",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -257,7 +257,7 @@ sound.Add({
 
 sound.Add({
     name = "snow.walk",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -268,7 +268,7 @@ sound.Add({
 
 sound.Add({
     name = "snow.sprint",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -280,7 +280,7 @@ sound.Add({
 
 sound.Add({
     name = "wood.walk",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -291,7 +291,7 @@ sound.Add({
 
 sound.Add({
     name = "wood.sprint",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -303,7 +303,7 @@ sound.Add({
 
 sound.Add({
     name = "carpet.walk",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -314,7 +314,7 @@ sound.Add({
 
 sound.Add({
     name = "carpet.sprint",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -325,7 +325,7 @@ sound.Add({
 
 sound.Add({
     name = "metalthin.walk",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -336,7 +336,7 @@ sound.Add({
 
 sound.Add({
     name = "metalthin.sprint",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -347,7 +347,7 @@ sound.Add({
 
 sound.Add({
     name = "woodpanel.walk",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -358,7 +358,7 @@ sound.Add({
 
 sound.Add({
     name = "woodpanel.sprint",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -369,7 +369,7 @@ sound.Add({
 
 sound.Add({
     name = "glass.walk",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -379,7 +379,7 @@ sound.Add({
 
 sound.Add({
     name = "glass.sprint",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -390,7 +390,7 @@ sound.Add({
 
 sound.Add({
     name = "woodcrate.walk",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -401,7 +401,7 @@ sound.Add({
 
 sound.Add({
     name = "woodcrate.sprint",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -412,7 +412,7 @@ sound.Add({
 
 sound.Add({
     name = "chainlink.walk",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -423,7 +423,7 @@ sound.Add({
 
 sound.Add({
     name = "chainlink.sprint",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -434,7 +434,7 @@ sound.Add({
 
 sound.Add({
     name = "plastic.walk",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -445,7 +445,7 @@ sound.Add({
 
 sound.Add({
     name = "plastic.sprint",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -456,7 +456,7 @@ sound.Add({
 
 sound.Add({
     name = "gravel.walk",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -467,7 +467,7 @@ sound.Add({
 
 sound.Add({
     name = "gravel.sprint",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -488,7 +488,7 @@ sound.Add({
 
 sound.Add({
     name = "tile.walk",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {150},
@@ -498,7 +498,7 @@ sound.Add({
 
 sound.Add({
     name = "tile.sprint",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {150},
@@ -509,7 +509,7 @@ sound.Add({
 
 sound.Add({
     name = "mud.walk",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {80, 110},
@@ -520,7 +520,7 @@ sound.Add({
 
 sound.Add({
     name = "mud.sprint",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {80, 110},
@@ -531,7 +531,7 @@ sound.Add({
 
 sound.Add({
     name = "sand.walk",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -542,7 +542,7 @@ sound.Add({
 
 sound.Add({
     name = "sand.sprint",
-    channel = 204,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
