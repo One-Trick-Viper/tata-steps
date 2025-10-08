@@ -144,7 +144,7 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
     elseif armorvalue >= 30 then
         ply:EmitSound("medium")
         ply:EmitSound("light")
-    elseif armorvalue >= 15 then
+    elseif armorvalue >= 1 then
         ply:EmitSound("light")
     end
 
