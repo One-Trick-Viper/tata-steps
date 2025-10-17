@@ -101,10 +101,14 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
     -- PrintTable(tr)
 
     if (sprinting[materialtype]) then -- lets play the sounds lol
-        ply:EmitSound("scuffle.tarmac")
+        
         ply:EmitSound(sprinting[materialtype])
         ply:EmitSound(ply:KeyDown(IN_SPEED) and "fatigues.sprint" or "fatigues.walk")
         ply:EmitSound(ply:KeyDown(IN_SPEED) and "coat.sprint" or "coat.walk")
+
+         if (materialtype == 30 or materialtype == 13 or materialtype == 0 or materialtype == 31 or materialtype == 33) then
+                ply:EmitSound("scuffle.tarmac")
+        end
 
         if waterlevel == 1 then
             ply:EmitSound("water.ankle")
@@ -138,7 +142,6 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         ply:EmitSound("bass")
     elseif armorvalue >= 60 then
         ply:EmitSound("heavy")
-        ply:EmitSound("medium")
         ply:EmitSound("light")
         ply:EmitSound("heavy_bass")
     elseif armorvalue >= 30 then

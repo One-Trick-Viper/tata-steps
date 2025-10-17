@@ -41,13 +41,21 @@ sound.Add({
 sound.Add({
     name = "scuffle.tarmac",
     channel = 309,
-    volume = 1.0,
+    volume = 0.5,
     level = 80,
     pitch = {95, 110},
     sound = {"steps/scuffle-tarmac-01.ogg", "steps/scuffle-tarmac-02.ogg", "steps/scuffle-tarmac-03.ogg",
              "steps/scuffle-tarmac-04.ogg", "steps/scuffle-tarmac-05.ogg", "steps/scuffle-tarmac-06.ogg",
              "steps/scuffle-tarmac-07.ogg", "steps/scuffle-tarmac-08.ogg", "steps/scuffle-tarmac-09.ogg",
-             "steps/scuffle-tarmac-10.ogg"}
+             "steps/scuffle-tarmac-10.ogg", "steps/scuffle-tarmac-11.ogg", "steps/scuffle-tarmac-12.ogg", 
+             "steps/scuffle-tarmac-13.ogg", "steps/scuffle-tarmac-14.ogg", 
+             "steps/scuffle-tarmac-15.ogg", "steps/scuffle-tarmac-16.ogg",
+             "steps/scuffle-tarmac-17.ogg" , "steps/scuffle-tarmac-18.ogg" , 
+             "steps/scuffle-tarmac-19.ogg", "steps/scuffle-tarmac-20.ogg",
+            "steps/scuffle-tarmac-21.ogg", "steps/scuffle-tarmac-22.ogg", 
+             "steps/scuffle-tarmac-23.ogg", "steps/scuffle-tarmac-24.ogg",
+             "steps/scuffle-tarmac-25.ogg" , "steps/scuffle-tarmac-26.ogg" , 
+             "steps/scuffle-tarmac-27.ogg", "steps/scuffle-tarmac-28.ogg", "steps/scuffle-tarmac-29.ogg"}
 })
 
 sound.Add({
