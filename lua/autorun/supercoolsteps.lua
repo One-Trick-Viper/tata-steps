@@ -16,6 +16,8 @@ local weaponcategories = {
 local surfacefootsteps = {
     [-1] = "tarmac.walk",
     [0] = "tarmac.walk",
+    [1] = "tarmac.walk",
+    [35] = "tarmac.walk",
     [30] = "tarmac.walk",
     [31] = "rock.walk",
     [33] = "rock.walk",
@@ -28,6 +30,7 @@ local surfacefootsteps = {
     [8] = "metalhollow.walk",
     [6] = "metalgrate.walk",
     [44] = "snow.walk",
+    [45] = "ice.walk",
     [21] = "woodpanel.walk",
     [18] = "wood.walk",
     [14] = "wood.walk",
@@ -47,6 +50,8 @@ local surfacefootsteps = {
 local surfacefootstepssprinting = {
     [-1] = "tarmac.sprint",
     [0] = "tarmac.sprint",
+    [1] = "tarmac.sprint",
+    [35] = "tarmac.sprint",
     [30] = "tarmac.sprint",
     [31] = "rock.sprint",
     [33] = "rock.sprint",
@@ -59,6 +64,7 @@ local surfacefootstepssprinting = {
     [2] = "metalhollow.sprint",
     [6] = "metalgrate.sprint",
     [44] = "snow.sprint",
+    [45] = "ice.sprint",
     [21] = "woodpanel.sprint",
     [18] = "wood.sprint",
     [14] = "wood.sprint",
@@ -96,7 +102,7 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         endpos = ply:GetPos() + Vector(0, 0, -10),
         filter = ply
     })
-    -- print(tr.SurfaceProps)
+    print(tr.SurfaceProps)
     local materialtype = tr.SurfaceProps or 30
     -- PrintTable(tr)
 
@@ -106,7 +112,7 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         ply:EmitSound(ply:KeyDown(IN_SPEED) and "fatigues.sprint" or "fatigues.walk")
         ply:EmitSound(ply:KeyDown(IN_SPEED) and "coat.sprint" or "coat.walk")
 
-         if (materialtype == 30 or materialtype == 13 or materialtype == 0 or materialtype == 31 or materialtype == 33) then
+         if (materialtype == 30 or materialtype == 0 or materialtype == 31 or materialtype == 33) then
                 ply:EmitSound("scuffle.tarmac")
         end
 
@@ -142,11 +148,9 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         ply:EmitSound("bass")
     elseif armorvalue >= 60 then
         ply:EmitSound("heavy")
-        ply:EmitSound("light")
         ply:EmitSound("heavy_bass")
     elseif armorvalue >= 30 then
         ply:EmitSound("medium")
-        ply:EmitSound("light")
     elseif armorvalue >= 1 then
         ply:EmitSound("light")
     end

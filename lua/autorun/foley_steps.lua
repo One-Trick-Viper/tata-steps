@@ -16,7 +16,7 @@ sound.Add({
 
 sound.Add({
     name = "indoor.walk",
-    channel = 255,
+    channel = CHAN_AUTO,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -28,7 +28,7 @@ sound.Add({
 
 sound.Add({
     name = "indoor.sprint",
-    channel = 255,
+    channel = CHAN_AUTO,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -40,27 +40,25 @@ sound.Add({
 
 sound.Add({
     name = "scuffle.tarmac",
-    channel = 309,
+    channel = CHAN_AUTO,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
     sound = {"steps/scuffle-tarmac-01.ogg", "steps/scuffle-tarmac-02.ogg", "steps/scuffle-tarmac-03.ogg",
              "steps/scuffle-tarmac-04.ogg", "steps/scuffle-tarmac-05.ogg", "steps/scuffle-tarmac-06.ogg",
              "steps/scuffle-tarmac-07.ogg", "steps/scuffle-tarmac-08.ogg", "steps/scuffle-tarmac-09.ogg",
-             "steps/scuffle-tarmac-10.ogg", "steps/scuffle-tarmac-11.ogg", "steps/scuffle-tarmac-12.ogg", 
-             "steps/scuffle-tarmac-13.ogg", "steps/scuffle-tarmac-14.ogg", 
-             "steps/scuffle-tarmac-15.ogg", "steps/scuffle-tarmac-16.ogg",
-             "steps/scuffle-tarmac-17.ogg" , "steps/scuffle-tarmac-18.ogg" , 
-             "steps/scuffle-tarmac-19.ogg", "steps/scuffle-tarmac-20.ogg",
-            "steps/scuffle-tarmac-21.ogg", "steps/scuffle-tarmac-22.ogg", 
-             "steps/scuffle-tarmac-23.ogg", "steps/scuffle-tarmac-24.ogg",
-             "steps/scuffle-tarmac-25.ogg" , "steps/scuffle-tarmac-26.ogg" , 
-             "steps/scuffle-tarmac-27.ogg", "steps/scuffle-tarmac-28.ogg", "steps/scuffle-tarmac-29.ogg"}
+             "steps/scuffle-tarmac-10.ogg", "steps/scuffle-tarmac-11.ogg", "steps/scuffle-tarmac-12.ogg",
+             "steps/scuffle-tarmac-13.ogg", "steps/scuffle-tarmac-14.ogg", "steps/scuffle-tarmac-15.ogg",
+             "steps/scuffle-tarmac-16.ogg", "steps/scuffle-tarmac-17.ogg", "steps/scuffle-tarmac-18.ogg",
+             "steps/scuffle-tarmac-19.ogg", "steps/scuffle-tarmac-20.ogg", "steps/scuffle-tarmac-21.ogg",
+             "steps/scuffle-tarmac-22.ogg", "steps/scuffle-tarmac-23.ogg", "steps/scuffle-tarmac-24.ogg",
+             "steps/scuffle-tarmac-25.ogg", "steps/scuffle-tarmac-26.ogg", "steps/scuffle-tarmac-27.ogg",
+             "steps/scuffle-tarmac-28.ogg", "steps/scuffle-tarmac-29.ogg"}
 })
 
 sound.Add({
     name = "wet.walk",
-    channel = 310,
+    channel = CHAN_AUTO,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -71,7 +69,7 @@ sound.Add({
 
 sound.Add({
     name = "wet.sprint",
-    channel = 310,
+    channel = CHAN_AUTO,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -82,7 +80,7 @@ sound.Add({
 
 sound.Add({
     name = "water.ankle",
-    channel = 311,
+    channel = CHAN_AUTO,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -94,7 +92,7 @@ sound.Add({
 
 sound.Add({
     name = "water.waist",
-    channel = 311,
+    channel = CHAN_AUTO,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -180,8 +178,7 @@ sound.Add({
     level = 80,
     pitch = {95, 110},
     sound = {"steps/dirt-walk-01.ogg", "steps/dirt-walk-02.ogg", "steps/dirt-walk-03.ogg", "steps/dirt-walk-04.ogg",
-             "steps/dirt-walk-05.ogg", "steps/dirt-walk-06.ogg", "steps/dirt-walk-07.ogg", "steps/dirt-walk-08.ogg",
-             "steps/dirt-walk-09.ogg", "steps/dirt-walk-10.ogg"}
+             "steps/dirt-walk-05.ogg", "steps/dirt-walk-06.ogg"}
 })
 
 sound.Add({
@@ -191,9 +188,7 @@ sound.Add({
     level = 80,
     pitch = {95, 110},
     sound = {"steps/dirt-sprint-01.ogg", "steps/dirt-sprint-02.ogg", "steps/dirt-sprint-03.ogg",
-             "steps/dirt-sprint-04.ogg", "steps/dirt-sprint-05.ogg", "steps/dirt-sprint-06.ogg",
-             "steps/dirt-sprint-07.ogg", "steps/dirt-sprint-08.ogg", "steps/dirt-sprint-09.ogg",
-             "steps/dirt-sprint-10.ogg"}
+             "steps/dirt-sprint-04.ogg", "steps/dirt-sprint-05.ogg", "steps/dirt-sprint-06.ogg"}
 })
 
 sound.Add({
@@ -287,14 +282,33 @@ sound.Add({
 })
 
 sound.Add({
+    name = "ice.walk",
+    channel = CHAN_BODY,
+    volume = 0.5,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/ice-walk-01.ogg", "steps/ice-walk-02.ogg", "steps/ice-walk-03.ogg", "steps/ice-walk-04.ogg",
+             "steps/ice-walk-05.ogg", "steps/ice-walk-06.ogg"}
+})
+
+sound.Add({
+    name = "ice.sprint",
+    channel = CHAN_BODY,
+    volume = 0.5,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/ice-sprint-01.ogg", "steps/ice-sprint-02.ogg", "steps/ice-sprint-03.ogg", "steps/ice-sprint-04.ogg",
+             "steps/ice-sprint-05.ogg", "steps/ice-sprint-06.ogg"}
+})
+
+sound.Add({
     name = "wood.walk",
     channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
     sound = {"steps/wood-walk-01.ogg", "steps/wood-walk-02.ogg", "steps/wood-walk-03.ogg", "steps/wood-walk-04.ogg",
-             "steps/wood-walk-05.ogg", "steps/wood-walk-06.ogg", "steps/wood-walk-07.ogg", "steps/wood-walk-08.ogg",
-             "steps/wood-walk-09.ogg", "steps/wood-walk-10.ogg"}
+             "steps/wood-walk-05.ogg", "steps/wood-walk-06.ogg"}
 })
 
 sound.Add({
@@ -304,9 +318,7 @@ sound.Add({
     level = 80,
     pitch = {95, 110},
     sound = {"steps/wood-sprint-01.ogg", "steps/wood-sprint-02.ogg", "steps/wood-sprint-03.ogg",
-             "steps/wood-sprint-04.ogg", "steps/wood-sprint-05.ogg", "steps/wood-sprint-06.ogg",
-             "steps/wood-sprint-07.ogg", "steps/wood-sprint-08.ogg", "steps/wood-sprint-09.ogg",
-             "steps/wood-sprint-10.ogg"}
+             "steps/wood-sprint-04.ogg", "steps/wood-sprint-05.ogg", "steps/wood-sprint-06.ogg"}
 })
 
 sound.Add({
@@ -316,8 +328,7 @@ sound.Add({
     level = 80,
     pitch = {95, 110},
     sound = {"steps/carpet-walk-01.ogg", "steps/carpet-walk-02.ogg", "steps/carpet-walk-03.ogg",
-             "steps/carpet-walk-04.ogg", "steps/carpet-walk-05.ogg", "steps/carpet-walk-06.ogg",
-             "steps/carpet-walk-07.ogg", "steps/carpet-walk-08.ogg"}
+             "steps/carpet-walk-04.ogg", "steps/carpet-walk-05.ogg", "steps/carpet-walk-06.ogg"}
 })
 
 sound.Add({
@@ -327,8 +338,7 @@ sound.Add({
     level = 80,
     pitch = {95, 110},
     sound = {"steps/carpet-sprint-01.ogg", "steps/carpet-sprint-02.ogg", "steps/carpet-sprint-03.ogg",
-             "steps/carpet-sprint-04.ogg", "steps/carpet-sprint-05.ogg", "steps/carpet-sprint-06.ogg",
-             "steps/carpet-sprint-07.ogg", "steps/carpet-sprint-08.ogg"}
+             "steps/carpet-sprint-04.ogg", "steps/carpet-sprint-05.ogg", "steps/carpet-sprint-06.ogg"}
 })
 
 sound.Add({
