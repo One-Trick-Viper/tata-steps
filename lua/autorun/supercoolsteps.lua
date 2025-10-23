@@ -81,6 +81,16 @@ local surfacefootstepssprinting = {
     [47] = "carpet.sprint",
 }
 
+CHAN_INDOORLAYER = 150
+CHAN_SCUFFLELAYER = 151
+CHAN_WETLAYER = 152
+CHAN_FOLEY_1 = 153
+CHAN_FOLEY_2 = 153
+CHAN_GEARLAYER = 154
+CHAN_RATTLELAYER = 155
+CHAN_BASSLAYER = 156
+CHAN_STANCELAYER = 157
+
 hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, volume, rf)
     local weapon = ply:GetActiveWeapon()
     local armorvalue = ply:Armor()
@@ -110,7 +120,6 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         
         ply:EmitSound(sprinting[materialtype])
         ply:EmitSound(ply:KeyDown(IN_SPEED) and "fatigues.sprint" or "fatigues.walk")
-        ply:EmitSound(ply:KeyDown(IN_SPEED) and "coat.sprint" or "coat.walk")
 
          if (materialtype == 30 or materialtype == 0 or materialtype == 31 or materialtype == 33) then
                 ply:EmitSound("scuffle.tarmac")

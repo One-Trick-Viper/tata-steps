@@ -16,8 +16,8 @@ sound.Add({
 
 sound.Add({
     name = "indoor.walk",
-    channel = CHAN_AUTO,
-    volume = 0.5,
+    channel = CHAN_INDOORLAYER,
+    volume = 0.3,
     level = 80,
     pitch = {95, 110},
     sound = {"steps/indoor-walk-01.ogg", "steps/indoor-walk-02.ogg", "steps/indoor-walk-03.ogg",
@@ -28,8 +28,8 @@ sound.Add({
 
 sound.Add({
     name = "indoor.sprint",
-    channel = CHAN_AUTO,
-    volume = 0.5,
+    channel = CHAN_INDOORLAYER,
+    volume = 0.3,
     level = 80,
     pitch = {95, 110},
     sound = {"steps/indoor-layer-01.ogg", "steps/indoor-layer-02.ogg", "steps/indoor-layer-03.ogg",
@@ -40,7 +40,7 @@ sound.Add({
 
 sound.Add({
     name = "scuffle.tarmac",
-    channel = CHAN_AUTO,
+    channel = CHAN_SCUFFLELAYER,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -58,7 +58,7 @@ sound.Add({
 
 sound.Add({
     name = "wet.walk",
-    channel = CHAN_AUTO,
+    channel = CHAN_WETLAYER,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -69,7 +69,7 @@ sound.Add({
 
 sound.Add({
     name = "wet.sprint",
-    channel = CHAN_AUTO,
+    channel = CHAN_WETLAYER,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -80,7 +80,7 @@ sound.Add({
 
 sound.Add({
     name = "water.ankle",
-    channel = CHAN_AUTO,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -92,7 +92,7 @@ sound.Add({
 
 sound.Add({
     name = "water.waist",
-    channel = CHAN_AUTO,
+    channel = CHAN_BODY,
     volume = 1,
     level = 80,
     pitch = {95, 110},

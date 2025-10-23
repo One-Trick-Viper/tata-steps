@@ -1,6 +1,15 @@
 sound.Add({
+    name = "jump",
+    channel = CHAN_FOLEY_2,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"gear/suit-t-01.ogg", "gear/suit-t-02.ogg", "gear/suit-t-03.ogg", "gear/suit-t-04.ogg"}
+})
+
+sound.Add({
     name = "land",
-    channel = CHAN_AUTO,
+    channel = CHAN_FOLEY_2,
     volume = 0.3,
     level = 80,
     pitch = {95, 110},
@@ -9,7 +18,7 @@ sound.Add({
 
 sound.Add({
     name = "stand.to.crouch",
-    channel = CHAN_AUTO,
+    channel = CHAN_STANCELAYER,
     volume = 0.3,
     level = 80,
     pitch = {95, 110},
@@ -18,7 +27,7 @@ sound.Add({
 
 sound.Add({
     name = "crouch.to.stand",
-    channel = CHAN_AUTO,
+    channel = CHAN_STANCELAYER,
     volume = 0.3,
     level = 80,
     pitch = {95, 110},
@@ -27,7 +36,7 @@ sound.Add({
 
 sound.Add({
     name = "fatigues.walk",
-    channel = CHAN_AUTO,
+    channel = CHAN_FOLEY_1,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -39,7 +48,7 @@ sound.Add({
 
 sound.Add({
     name = "fatigues.sprint",
-    channel = CHAN_AUTO,
+    channel = CHAN_FOLEY_1,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -50,28 +59,8 @@ sound.Add({
 })
 
 sound.Add({
-    name = "coat.walk",
-    channel = CHAN_AUTO,
-    volume = 0.25,
-    level = 80,
-    pitch = {95, 110},
-    sound = {"gear/coat-walk-01.ogg", "gear/coat-walk-02.ogg", "gear/coat-walk-03.ogg", "gear/coat-walk-04.ogg",
-             "gear/coat-walk-05.ogg"}
-})
-
-sound.Add({
-    name = "coat.sprint",
-    channel = CHAN_AUTO,
-    volume = 0.25,
-    level = 80,
-    pitch = {95, 110},
-    sound = {"gear/coat-sprint-01.ogg", "gear/coat-sprint-02.ogg", "gear/coat-sprint-03.ogg", "gear/coat-sprint-04.ogg",
-             "gear/coat-sprint-05.ogg"}
-})
-
-sound.Add({
     name = "light",
-    channel = CHAN_AUTO,
+    channel = CHAN_GEARLAYER,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -81,7 +70,7 @@ sound.Add({
 
 sound.Add({
     name = "medium",
-    channel = CHAN_AUTO,
+    channel = CHAN_GEARLAYER,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -91,7 +80,7 @@ sound.Add({
 
 sound.Add({
     name = "heavy",
-    channel = CHAN_AUTO,
+    channel = CHAN_GEARLAYER,
     volume = 0.15,
     level = 80,
     pitch = {95, 110},
@@ -101,7 +90,7 @@ sound.Add({
 
 sound.Add({
     name = "superheavy",
-    channel = CHAN_AUTO,
+    channel = CHAN_GEARLAYER,
     volume = 0.15,
     level = 80,
     pitch = {95, 110},
@@ -110,8 +99,28 @@ sound.Add({
 })
 
 sound.Add({
+    name = "heavy_bass",
+    channel = CHAN_BASSLAYER,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"gear/heavy-bass-01.ogg", "gear/heavy-bass-02.ogg", "gear/heavy-bass-03.ogg", "gear/heavy-bass-04.ogg",
+             "gear/heavy-bass-05.ogg", "gear/heavy-bass-06.ogg"}
+})
+
+sound.Add({
+    name = "bass",
+    channel = CHAN_BASSLAYER,
+    volume = 1,
+    level = 80,
+    pitch = {95, 110},
+    sound = {"steps/bass-01.ogg", "steps/bass-02.ogg", "steps/bass-03.ogg", "steps/bass-04.ogg", "steps/bass-05.ogg",
+             "steps/bass-06.ogg"}
+})
+
+sound.Add({
     name = "rattle.lmg",
-    channel = CHAN_AUTO,
+    channel = CHAN_RATTLELAYER,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -122,7 +131,7 @@ sound.Add({
 
 sound.Add({
     name = "rattle.rifle",
-    channel = CHAN_AUTO,
+    channel = CHAN_RATTLELAYER,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -133,7 +142,7 @@ sound.Add({
 
 sound.Add({
     name = "rattle.pistol",
-    channel = CHAN_AUTO,
+    channel = CHAN_RATTLELAYER,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -143,7 +152,7 @@ sound.Add({
 
 sound.Add({
     name = "rattle.smg",
-    channel = CHAN_AUTO,
+    channel = CHAN_RATTLELAYER,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -153,7 +162,7 @@ sound.Add({
 
 sound.Add({
     name = "rattle.launcher",
-    channel = CHAN_AUTO,
+    channel = CHAN_RATTLELAYER,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
@@ -164,39 +173,10 @@ sound.Add({
 
 sound.Add({
     name = "rattle.generic",
-    channel = CHAN_AUTO,
+    channel = CHAN_RATTLELAYER,
     volume = 0.5,
     level = 80,
     pitch = {95, 110},
     sound = {"gear/rattles/generic-run-01.ogg", "gear/rattles/generic-run-02.ogg", "gear/rattles/generic-run-03.ogg",
              "gear/rattles/generic-run-04.ogg", "gear/rattles/generic-run-05.ogg"}
-})
-
-sound.Add({
-    name = "jump",
-    channel = CHAN_AUTO,
-    volume = 1,
-    level = 80,
-    pitch = {95, 110},
-    sound = {"gear/suit-t-01.ogg", "gear/suit-t-02.ogg", "gear/suit-t-03.ogg", "gear/suit-t-04.ogg"}
-})
-
-sound.Add({
-    name = "heavy_bass",
-    channel = CHAN_AUTO,
-    volume = 1,
-    level = 80,
-    pitch = {95, 110},
-    sound = {"gear/heavy-bass-01.ogg", "gear/heavy-bass-02.ogg", "gear/heavy-bass-03.ogg", "gear/heavy-bass-04.ogg",
-             "gear/heavy-bass-05.ogg", "gear/heavy-bass-06.ogg"}
-})
-
-sound.Add({
-    name = "bass",
-    channel = CHAN_AUTO,
-    volume = 1,
-    level = 80,
-    pitch = {95, 110},
-    sound = {"steps/bass-01.ogg", "steps/bass-02.ogg", "steps/bass-03.ogg", "steps/bass-04.ogg", "steps/bass-05.ogg",
-             "steps/bass-06.ogg"}
 })
