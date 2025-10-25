@@ -81,15 +81,16 @@ local surfacefootstepssprinting = {
     [47] = "carpet.sprint",
 }
 
-CHAN_INDOORLAYER = 150
-CHAN_SCUFFLELAYER = 151
-CHAN_WETLAYER = 152
-CHAN_FOLEY_1 = 153
-CHAN_FOLEY_2 = 153
-CHAN_GEARLAYER = 154
-CHAN_RATTLELAYER = 155
-CHAN_BASSLAYER = 156
-CHAN_STANCELAYER = 157
+CHAN_INDOORLAYER = 200
+CHAN_SCUFFLELAYER = 201
+CHAN_WETLAYER = 202
+CHAN_FOLEY_1 = 203
+CHAN_FOLEY_2 = 204
+CHAN_GEARLAYER = 205
+CHAN_RATTLELAYER = 206
+CHAN_BASSLAYER = 207
+CHAN_STANCELAYER = 208
+CHAN_WATERLAYER = 209
 
 hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, volume, rf)
     local weapon = ply:GetActiveWeapon()
@@ -112,14 +113,14 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         endpos = ply:GetPos() + Vector(0, 0, -10),
         filter = ply
     })
-    print(tr.SurfaceProps)
+    -- print(tr.SurfaceProps)
     local materialtype = tr.SurfaceProps or 30
     -- PrintTable(tr)
 
     if (sprinting[materialtype]) then -- lets play the sounds lol
         
         ply:EmitSound(sprinting[materialtype])
-        ply:EmitSound(ply:KeyDown(IN_SPEED) and "fatigues.sprint" or "fatigues.walk")
+        ply:EmitSound(ply:KeyDown(IN_SPEED) and "coat.sprint" or "coat.walk")
 
          if (materialtype == 30 or materialtype == 0 or materialtype == 31 or materialtype == 33) then
                 ply:EmitSound("scuffle.tarmac")
@@ -154,9 +155,9 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
     --Armor values :steamhappy:
     if armorvalue >= 120 then
         ply:EmitSound("superheavy")
-        ply:EmitSound("bass")
+        -- ply:EmitSound("bass")
     elseif armorvalue >= 60 then
-        ply:EmitSound("heavy")
+        -- ply:EmitSound("heavy")
         ply:EmitSound("heavy_bass")
     elseif armorvalue >= 30 then
         ply:EmitSound("medium")

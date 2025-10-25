@@ -59,6 +59,26 @@ sound.Add({
 })
 
 sound.Add({
+    name = "coat.walk",
+    channel = CHAN_FOLEY_1,
+    volume = 1,
+    level = 80,
+    pitch = {80, 120},
+    sound = {"gear/coat-walk-01.ogg", "gear/coat-walk-02.ogg", "gear/coat-walk-03.ogg", "gear/coat-walk-04.ogg",
+             "gear/coat-walk-05.ogg"}
+})
+
+sound.Add({
+    name = "coat.sprint",
+    channel = CHAN_FOLEY_1,
+    volume = 1,
+    level = 80,
+    pitch = {80, 120},
+    sound = {"gear/coat-sprint-01.ogg", "gear/coat-sprint-02.ogg", "gear/coat-sprint-03.ogg", "gear/coat-sprint-04.ogg",
+             "gear/coat-sprint-05.ogg"}
+})
+
+sound.Add({
     name = "light",
     channel = CHAN_GEARLAYER,
     volume = 0.5,
@@ -81,7 +101,7 @@ sound.Add({
 sound.Add({
     name = "heavy",
     channel = CHAN_GEARLAYER,
-    volume = 0.15,
+    volume = 0.5,
     level = 80,
     pitch = {95, 110},
     sound = {"gear/heavy-01.ogg", "gear/heavy-02.ogg", "gear/heavy-03.ogg", "gear/heavy-04.ogg", "gear/heavy-05.ogg",
@@ -100,7 +120,7 @@ sound.Add({
 
 sound.Add({
     name = "heavy_bass",
-    channel = CHAN_BASSLAYER,
+    channel = CHAN_GEARLAYER,
     volume = 1,
     level = 80,
     pitch = {95, 110},
@@ -110,7 +130,7 @@ sound.Add({
 
 sound.Add({
     name = "bass",
-    channel = CHAN_BASSLAYER,
+    channel = CHAN_STATIC,
     volume = 1,
     level = 80,
     pitch = {95, 110},
