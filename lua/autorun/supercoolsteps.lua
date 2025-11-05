@@ -81,16 +81,15 @@ local surfacefootstepssprinting = {
     [47] = "carpet.sprint",
 }
 
-CHAN_INDOORLAYER = 200
-CHAN_SCUFFLELAYER = 201
-CHAN_WETLAYER = 202
-CHAN_FOLEY_1 = 203
-CHAN_FOLEY_2 = 204
-CHAN_GEARLAYER = 205
-CHAN_RATTLELAYER = 206
-CHAN_BASSLAYER = 207
-CHAN_STANCELAYER = 208
-CHAN_WATERLAYER = 209
+CHAN_INDOORLAYER = 150
+CHAN_WETLAYER = 151
+CHAN_FOLEY_1 = 152
+CHAN_FOLEY_2 = 153
+CHAN_GEARLAYER = 154
+CHAN_RATTLELAYER = 155
+CHAN_BASSLAYER = 156
+CHAN_STANCELAYER = 157
+CHAN_WATERLAYER = 158
 
 hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, volume, rf)
     local weapon = ply:GetActiveWeapon()
@@ -120,22 +119,20 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
     if (sprinting[materialtype]) then -- lets play the sounds lol
         
         ply:EmitSound(sprinting[materialtype])
-        ply:EmitSound(ply:KeyDown(IN_SPEED) and "coat.sprint" or "coat.walk")
-
-         if (materialtype == 30 or materialtype == 0 or materialtype == 31 or materialtype == 33) then
-                ply:EmitSound("scuffle.tarmac")
-        end
+        -- ply:EmitSound(ply:KeyDown(IN_SPEED) and "coat.sprint" or "coat.walk")
+        ply:EmitSound("clothes")
 
         if waterlevel == 1 then
             ply:EmitSound("water.ankle")
         elseif waterlevel == 2 then
-            ply:EmitSound("water.waist")
+            ply:EmitSound("water.waist.loop")
         elseif waterlevel == 3 then
-            ply:EmitSound("water.waist")
+            ply:EmitSound("water.waist.loop")
         end
 
         if ply.WaterExitTime != nil and CurTime() < ply.WaterExitTime + 7 then
-            ply:EmitSound(ply:KeyDown(IN_SPEED) and "wet.sprint" or "wet.walk")
+            -- ply:EmitSound(ply:KeyDown(IN_SPEED) and "wet.sprint" or "wet.walk")
+            ply:EmitSound("wet.add")
         end
 
         if IndoorCheck(ply) then
@@ -146,7 +143,8 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
             end
         else
             if israining then
-                ply:EmitSound(ply:KeyDown(IN_SPEED) and "wet.sprint" or "wet.walk")
+                -- ply:EmitSound(ply:KeyDown(IN_SPEED) and "wet.sprint" or "wet.walk")
+                ply:EmitSound("wet.add")
             end
         end
     end
@@ -157,8 +155,8 @@ hook.Add("PlayerFootstep", "CustomFootstep", function(ply, pos, foot, sound, vol
         ply:EmitSound("superheavy")
         -- ply:EmitSound("bass")
     elseif armorvalue >= 60 then
-        -- ply:EmitSound("heavy")
-        ply:EmitSound("heavy_bass")
+        ply:EmitSound("heavy")
+        -- ply:EmitSound("heavy_bass")
     elseif armorvalue >= 30 then
         ply:EmitSound("medium")
     elseif armorvalue >= 1 then
